@@ -1,0 +1,46 @@
+{
+  "teamId": "201",
+  "teamName": "The University of North Carolina at Greensboro",
+  "lastUpdated": "2025-11-25T19:23:13.617Z",
+  "games": [
+    {
+      "gameId": "6503649",
+      "date": "",
+      "opponent": "NC State",
+      "opponentId": "2607",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 47
+      },
+      "secondHalf": {
+        "scored": 27,
+        "allowed": 63
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 37,
+      "allowed": 47,
+      "gamesPlayed": 1
+    },
+    "secondHalf": {
+      "scored": 27,
+      "allowed": 63,
+      "gamesPlayed": 1
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 37,
+      "allowed": 47,
+      "gamesPlayed": 1
+    },
+    "secondHalf": {
+      "scored": 27,
+      "allowed": 63,
+      "gamesPlayed": 1
+    }
+  }
+}

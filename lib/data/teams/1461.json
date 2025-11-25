@@ -1,0 +1,121 @@
+{
+  "teamId": "1461",
+  "teamName": "University of Delaware",
+  "lastUpdated": "2025-11-25T19:22:56.193Z",
+  "games": [
+    {
+      "gameId": "6504317",
+      "date": "",
+      "opponent": "UNC Greensboro",
+      "opponentId": "201",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 27,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": null,
+        "allowed": null
+      }
+    },
+    {
+      "gameId": "6504316",
+      "date": "",
+      "opponent": "Southern Ill.",
+      "opponentId": "277",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 24,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 35,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6504315",
+      "date": "",
+      "opponent": "Saint Peter's",
+      "opponentId": "2323",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 26
+      },
+      "secondHalf": {
+        "scored": 32,
+        "allowed": 44
+      }
+    },
+    {
+      "gameId": "6501215",
+      "date": "",
+      "opponent": "BYU",
+      "opponentId": "1874",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 31,
+        "allowed": 51
+      }
+    },
+    {
+      "gameId": "6504314",
+      "date": "",
+      "opponent": "Wilmington (DE)",
+      "opponentId": "896",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 25,
+        "allowed": 33
+      }
+    },
+    {
+      "gameId": "6503612",
+      "date": "",
+      "opponent": "Bucknell",
+      "opponentId": "485",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 44
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 33.7,
+      "allowed": 32.3,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 34.8,
+      "allowed": 32,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 5
+    }
+  }
+}

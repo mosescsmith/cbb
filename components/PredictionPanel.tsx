@@ -4,28 +4,22 @@ import { useState, useEffect, useCallback } from 'react';
 import { Game, PredictionResponse } from '@/lib/types';
 import { debugLogger } from '@/lib/debugLogger';
 import { DebugPanel } from './DebugPanel';
-import { TeamStatsMissing } from './TeamStatsMissing';
-
+import { TeamSelector } from './TeamSelector';
 type HalfType = '1st' | '2nd';
 
 interface TeamSuggestion {
-  teamId: string;
-  teamName: string;
-  similarity: number;
-  gamesCount: number;
+  name: string;
+  score: number;
 }
 
 interface TeamStatsStatus {
   matched: boolean;
   stale: boolean;
-  gamesCount: number;
+  matchedName?: string;
+  matchConfidence?: number;
   suggestions?: TeamSuggestion[];
-  // Extended stats for preview
+  // TeamRankings stats
   seasonAverages?: {
-    firstHalf: { scored: number; allowed: number };
-    secondHalf: { scored: number; allowed: number };
-  };
-  last5Averages?: {
     firstHalf: { scored: number; allowed: number };
     secondHalf: { scored: number; allowed: number };
   };
@@ -51,34 +45,57 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
   const [awayStatsStatus, setAwayStatsStatus] = useState<TeamStatsStatus | null>(null);
   const [loadingStats, setLoadingStats] = useState(false);
 
-  // Team overrides (when user selects a suggestion)
-  const [homeTeamOverride, setHomeTeamOverride] = useState<{ id: string; name: string } | null>(null);
-  const [awayTeamOverride, setAwayTeamOverride] = useState<{ id: string; name: string } | null>(null);
+  // Team name overrides (when user selects from fuzzy suggestions)
+  const [homeTeamOverride, setHomeTeamOverride] = useState<string | null>(null);
+  const [awayTeamOverride, setAwayTeamOverride] = useState<string | null>(null);
 
   // Load debug preference on mount
   useEffect(() => {
     setDebugEnabled(debugLogger.isDebugEnabled());
   }, []);
 
-  // Fetch team stats on mount (lazy loading - fetches from NCAA API if needed)
+  // Fetch team stats status from TeamRankings CSV data
   const fetchTeamStatsStatus = useCallback(async (teamId: string, teamName: string): Promise<TeamStatsStatus | null> => {
     try {
-      // Lazy fetch - will pull from NCAA API if not cached
-      const response = await fetch(`/api/team-stats/${teamId}?teamName=${encodeURIComponent(teamName)}`);
+      const response = await fetch(`/api/team-stats/${teamId}?teamName=${encodeURIComponent(teamName)}&checkOnly=true`);
       if (!response.ok) return null;
       const data = await response.json();
       return {
-        matched: data._meta?.matched ?? true,
+        matched: data._meta?.matched ?? false,
         stale: data._meta?.stale ?? false,
-        gamesCount: data.games?.length ?? 0,
-        suggestions: data._meta?.suggestions,
+        matchedName: data._meta?.matchedName,
+        matchConfidence: data._meta?.matchConfidence,
+        suggestions: data.suggestions,
         seasonAverages: data.seasonAverages,
-        last5Averages: data.last5Averages,
       };
     } catch {
       return null;
     }
   }, []);
+
+  // Handler when user selects a team from suggestions
+  const handleTeamSelect = useCallback(async (
+    isHome: boolean,
+    selectedTeamName: string,
+    teamId: string
+  ) => {
+    // Set the override
+    if (isHome) {
+      setHomeTeamOverride(selectedTeamName);
+    } else {
+      setAwayTeamOverride(selectedTeamName);
+    }
+
+    // Re-fetch stats with the selected team name
+    const status = await fetchTeamStatsStatus(teamId, selectedTeamName);
+    if (status) {
+      if (isHome) {
+        setHomeStatsStatus(status);
+      } else {
+        setAwayStatsStatus(status);
+      }
+    }
+  }, [fetchTeamStatsStatus]);
 
   useEffect(() => {
     const loadStatsStatus = async () => {
@@ -110,31 +127,6 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
       setHalftimeAwayScore(game.halftimeAwayScore.toString());
     }
   }, [selectedHalf, game.halftimeHomeScore, game.halftimeAwayScore]);
-
-  // Handle selecting a suggested team
-  const handleSelectHomeTeam = async (teamId: string, teamName: string) => {
-    setHomeTeamOverride({ id: teamId, name: teamName });
-    // Fetch new stats status for the selected team
-    const status = await fetchTeamStatsStatus(teamId, teamName);
-    if (status) {
-      setHomeStatsStatus({ ...status, matched: true });
-    }
-    if (debugEnabled) {
-      debugLogger.info(`Home team override: ${teamName} (${teamId})`);
-    }
-  };
-
-  const handleSelectAwayTeam = async (teamId: string, teamName: string) => {
-    setAwayTeamOverride({ id: teamId, name: teamName });
-    // Fetch new stats status for the selected team
-    const status = await fetchTeamStatsStatus(teamId, teamName);
-    if (status) {
-      setAwayStatsStatus({ ...status, matched: true });
-    }
-    if (debugEnabled) {
-      debugLogger.info(`Away team override: ${teamName} (${teamId})`);
-    }
-  };
 
   const fetchHalftimeScores = async () => {
     setFetchingHalftime(true);
@@ -207,6 +199,9 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
           half: selectedHalf,
           halftimeHomeScore: selectedHalf === '2nd' ? parseInt(halftimeHomeScore) : undefined,
           halftimeAwayScore: selectedHalf === '2nd' ? parseInt(halftimeAwayScore) : undefined,
+          // Pass team name overrides if user selected from suggestions
+          homeTeamOverride: homeTeamOverride || undefined,
+          awayTeamOverride: awayTeamOverride || undefined,
           debug: debugEnabled,
         }),
       });
@@ -295,73 +290,6 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
         </button>
       </div>
 
-      {/* Team Stats Warnings */}
-      {!loadingStats && (
-        <div className="space-y-3 mb-6">
-          {/* Home Team */}
-          {homeStatsStatus && !homeStatsStatus.matched && !homeTeamOverride && (
-            <TeamStatsMissing
-              teamName={game.homeTeam.name}
-              teamId={game.homeTeam.id}
-              suggestions={homeStatsStatus.suggestions}
-              onSelectTeam={handleSelectHomeTeam}
-              isLoading={loading}
-            />
-          )}
-          {homeTeamOverride && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-3 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span className="text-sm text-green-800">
-                  Using <strong>{homeTeamOverride.name}</strong> stats for {game.homeTeam.name}
-                </span>
-              </div>
-              <button
-                onClick={() => {
-                  setHomeTeamOverride(null);
-                  // Re-fetch original team status
-                  fetchTeamStatsStatus(game.homeTeam.id, game.homeTeam.name).then(setHomeStatsStatus);
-                }}
-                className="text-xs text-green-600 hover:text-green-800 underline"
-              >
-                Reset
-              </button>
-            </div>
-          )}
-
-          {/* Away Team */}
-          {awayStatsStatus && !awayStatsStatus.matched && !awayTeamOverride && (
-            <TeamStatsMissing
-              teamName={game.awayTeam.name}
-              teamId={game.awayTeam.id}
-              suggestions={awayStatsStatus.suggestions}
-              onSelectTeam={handleSelectAwayTeam}
-              isLoading={loading}
-            />
-          )}
-          {awayTeamOverride && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-3 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span className="text-sm text-green-800">
-                  Using <strong>{awayTeamOverride.name}</strong> stats for {game.awayTeam.name}
-                </span>
-              </div>
-              <button
-                onClick={() => {
-                  setAwayTeamOverride(null);
-                  // Re-fetch original team status
-                  fetchTeamStatsStatus(game.awayTeam.id, game.awayTeam.name).then(setAwayStatsStatus);
-                }}
-                className="text-xs text-green-600 hover:text-green-800 underline"
-              >
-                Reset
-              </button>
-            </div>
-          )}
-        </div>
-      )}
-
       {loadingStats && (
         <div className="mb-6 text-center text-sm text-gray-500">
           Checking team stats availability...
@@ -372,41 +300,61 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
       {!loadingStats && (homeStatsStatus || awayStatsStatus) && (
         <div className="mb-6 bg-gray-50 rounded-lg p-4 border border-gray-200">
           <div className="mb-3">
-            <h3 className="font-semibold text-gray-700 text-sm">Team Stats Preview</h3>
+            <h3 className="font-semibold text-gray-700 text-sm">Team Stats (TeamRankings)</h3>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {/* Away Team Stats */}
-            <div className="text-center">
-              <div className="text-xs text-gray-500 mb-1">{game.awayTeam.name}</div>
-              {awayStatsStatus?.matched && awayStatsStatus.gamesCount > 0 ? (
-                <div>
-                  <div className="text-lg font-bold text-green-600">{awayStatsStatus.gamesCount} games</div>
+            <div>
+              <div className="text-xs text-gray-500 mb-1 text-center">{game.awayTeam.name}</div>
+              {awayStatsStatus?.matched ? (
+                <div className="text-center">
+                  <div className="text-sm font-bold text-green-600">✓ Found</div>
+                  {awayStatsStatus.matchedName && awayStatsStatus.matchedName !== game.awayTeam.name && (
+                    <div className="text-xs text-gray-500">as &quot;{awayStatsStatus.matchedName}&quot;</div>
+                  )}
                   {awayStatsStatus.seasonAverages && (
                     <div className="text-xs text-gray-600 mt-1">
-                      1H: {awayStatsStatus.seasonAverages.firstHalf.scored.toFixed(1)} pts |
-                      2H: {awayStatsStatus.seasonAverages.secondHalf.scored.toFixed(1)} pts
+                      1H: {awayStatsStatus.seasonAverages.firstHalf.scored.toFixed(1)} PPG |
+                      2H: {awayStatsStatus.seasonAverages.secondHalf.scored.toFixed(1)} PPG
                     </div>
                   )}
                 </div>
+              ) : awayStatsStatus?.suggestions && awayStatsStatus.suggestions.length > 0 ? (
+                <TeamSelector
+                  teamName={game.awayTeam.name}
+                  suggestions={awayStatsStatus.suggestions}
+                  onSelect={(name) => handleTeamSelect(false, name, game.awayTeam.id)}
+                  disabled={loading}
+                />
               ) : (
-                <div className="text-lg font-bold text-red-500">No data</div>
+                <div className="text-sm font-bold text-red-500 text-center">Not found</div>
               )}
             </div>
             {/* Home Team Stats */}
-            <div className="text-center">
-              <div className="text-xs text-gray-500 mb-1">{game.homeTeam.name}</div>
-              {homeStatsStatus?.matched && homeStatsStatus.gamesCount > 0 ? (
-                <div>
-                  <div className="text-lg font-bold text-green-600">{homeStatsStatus.gamesCount} games</div>
+            <div>
+              <div className="text-xs text-gray-500 mb-1 text-center">{game.homeTeam.name}</div>
+              {homeStatsStatus?.matched ? (
+                <div className="text-center">
+                  <div className="text-sm font-bold text-green-600">✓ Found</div>
+                  {homeStatsStatus.matchedName && homeStatsStatus.matchedName !== game.homeTeam.name && (
+                    <div className="text-xs text-gray-500">as &quot;{homeStatsStatus.matchedName}&quot;</div>
+                  )}
                   {homeStatsStatus.seasonAverages && (
                     <div className="text-xs text-gray-600 mt-1">
-                      1H: {homeStatsStatus.seasonAverages.firstHalf.scored.toFixed(1)} pts |
-                      2H: {homeStatsStatus.seasonAverages.secondHalf.scored.toFixed(1)} pts
+                      1H: {homeStatsStatus.seasonAverages.firstHalf.scored.toFixed(1)} PPG |
+                      2H: {homeStatsStatus.seasonAverages.secondHalf.scored.toFixed(1)} PPG
                     </div>
                   )}
                 </div>
+              ) : homeStatsStatus?.suggestions && homeStatsStatus.suggestions.length > 0 ? (
+                <TeamSelector
+                  teamName={game.homeTeam.name}
+                  suggestions={homeStatsStatus.suggestions}
+                  onSelect={(name) => handleTeamSelect(true, name, game.homeTeam.id)}
+                  disabled={loading}
+                />
               ) : (
-                <div className="text-lg font-bold text-red-500">No data</div>
+                <div className="text-sm font-bold text-red-500 text-center">Not found</div>
               )}
             </div>
           </div>
@@ -529,11 +477,11 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
               </div>
               {prediction._meta.stats && (
                 <div className="flex items-center justify-between text-xs">
-                  <span className={prediction._meta.stats.away?.games > 0 ? 'text-green-600' : 'text-orange-500'}>
-                    {game.awayTeam.name}: {prediction._meta.stats.away?.games || 0} games
+                  <span className={prediction._meta.stats.away ? 'text-green-600' : 'text-orange-500'}>
+                    {game.awayTeam.name}: {prediction._meta.stats.away?.matched || 'No match'}
                   </span>
-                  <span className={prediction._meta.stats.home?.games > 0 ? 'text-green-600' : 'text-orange-500'}>
-                    {game.homeTeam.name}: {prediction._meta.stats.home?.games || 0} games
+                  <span className={prediction._meta.stats.home ? 'text-green-600' : 'text-orange-500'}>
+                    {game.homeTeam.name}: {prediction._meta.stats.home?.matched || 'No match'}
                   </span>
                 </div>
               )}

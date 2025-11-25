@@ -1,14 +1,29 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PredictionRequest, PredictionResponse, Game, TeamStatsCache, TeamStatsResult } from '@/lib/types';
+import { PredictionRequest, PredictionResponse, Game } from '@/lib/types';
 import { fetchTodaysGames } from '@/lib/ncaaService';
-import { getOrUpdateTeamStats } from '@/lib/statsService';
 import { getTeamRatings } from '@/lib/ratingsService';
 import { getModelsInOrder, ModelConfig, estimateCost } from '@/lib/modelConfig';
+import {
+  getTeamRankingsStats,
+  formatMatchupStatsForPrompt,
+  TeamRankingsStats,
+} from '@/lib/teamRankingsService';
 
 export async function POST(request: NextRequest) {
   try {
-    const body: PredictionRequest = await request.json();
-    const { gameId, half, halftimeHomeScore, halftimeAwayScore, debug } = body;
+    const body = await request.json();
+    const {
+      gameId,
+      half,
+      halftimeHomeScore,
+      halftimeAwayScore,
+      homeTeamOverride,
+      awayTeamOverride,
+      debug,
+    } = body as PredictionRequest & {
+      homeTeamOverride?: string;
+      awayTeamOverride?: string;
+    };
 
     const log = (message: string, data?: any) => {
       if (debug) {
@@ -42,42 +57,40 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Fetch team stats and ratings
-    log('Loading team stats from cache...');
+    // Fetch team stats from TeamRankings static data
+    // Use overrides if provided (from user selecting fuzzy match)
+    const homeTeamNameForStats = homeTeamOverride || game.homeTeam.name;
+    const awayTeamNameForStats = awayTeamOverride || game.awayTeam.name;
+
+    log('Loading team stats from TeamRankings data...', {
+      homeTeam: homeTeamNameForStats,
+      awayTeam: awayTeamNameForStats,
+      homeOverride: homeTeamOverride ? 'yes' : 'no',
+      awayOverride: awayTeamOverride ? 'yes' : 'no',
+    });
+
     const statsStartTime = Date.now();
-    let homeTeamStats: TeamStatsCache | null = null;
-    let awayTeamStats: TeamStatsCache | null = null;
-    let homeStatsResult: TeamStatsResult | null = null;
-    let awayStatsResult: TeamStatsResult | null = null;
+    let homeTeamStats: TeamRankingsStats | null = null;
+    let awayTeamStats: TeamRankingsStats | null = null;
 
     try {
-      const [homeResult, awayResult] = await Promise.all([
-        getOrUpdateTeamStats(game.homeTeam.id, game.homeTeam.name),
-        getOrUpdateTeamStats(game.awayTeam.id, game.awayTeam.name),
-      ]);
-      homeStatsResult = homeResult;
-      awayStatsResult = awayResult;
-      homeTeamStats = homeResult.matched ? homeResult.cache : null;
-      awayTeamStats = awayResult.matched ? awayResult.cache : null;
+      homeTeamStats = getTeamRankingsStats(homeTeamNameForStats);
+      awayTeamStats = getTeamRankingsStats(awayTeamNameForStats);
 
       const statsElapsed = ((Date.now() - statsStartTime) / 1000).toFixed(2);
-      const homeStatus = !homeResult.matched ? '⚠ Not found' : (!homeResult.stale ? '✓ Cached' : '↻ Updated');
-      const awayStatus = !awayResult.matched ? '⚠ Not found' : (!awayResult.stale ? '✓ Cached' : '↻ Updated');
-      log(`Stats loaded (${statsElapsed}s)`, {
-        home: { status: homeStatus, games: homeResult.cache.games.length, matched: homeResult.matched },
-        away: { status: awayStatus, games: awayResult.cache.games.length, matched: awayResult.matched },
+      log(`TeamRankings stats loaded (${statsElapsed}s)`, {
+        home: homeTeamStats ? {
+          matched: homeTeamStats.matchedName,
+          confidence: `${(homeTeamStats.matchConfidence * 100).toFixed(0)}%`,
+        } : 'Not found',
+        away: awayTeamStats ? {
+          matched: awayTeamStats.matchedName,
+          confidence: `${(awayTeamStats.matchConfidence * 100).toFixed(0)}%`,
+        } : 'Not found',
       });
-
-      // Log suggestions if teams weren't matched
-      if (!homeResult.matched && homeResult.suggestions?.length) {
-        log(`Suggestions for ${game.homeTeam.name}:`, homeResult.suggestions.slice(0, 3));
-      }
-      if (!awayResult.matched && awayResult.suggestions?.length) {
-        log(`Suggestions for ${game.awayTeam.name}:`, awayResult.suggestions.slice(0, 3));
-      }
     } catch (error) {
-      log('Failed to fetch team stats', { error });
-      console.warn('Could not fetch team stats:', error);
+      log('Failed to load TeamRankings stats', { error });
+      console.warn('Could not load TeamRankings stats:', error);
       // Continue without stats
     }
 
@@ -231,13 +244,13 @@ export async function POST(request: NextRequest) {
         modelName: usedModel.name,
         totalTime: `${(totalAiTime / 1000).toFixed(2)}s`,
         stats: {
-          home: homeStatsResult ? {
-            matched: homeStatsResult.matched,
-            games: homeStatsResult.cache.games.length,
+          home: homeTeamStats ? {
+            matched: homeTeamStats.matchedName,
+            confidence: homeTeamStats.matchConfidence,
           } : null,
-          away: awayStatsResult ? {
-            matched: awayStatsResult.matched,
-            games: awayStatsResult.cache.games.length,
+          away: awayTeamStats ? {
+            matched: awayTeamStats.matchedName,
+            confidence: awayTeamStats.matchConfidence,
           } : null,
         },
       },
@@ -258,11 +271,23 @@ function buildPredictionPrompt(
   half: '1st' | '2nd',
   halftimeHomeScore?: number,
   halftimeAwayScore?: number,
-  homeStats?: TeamStatsCache | null,
-  awayStats?: TeamStatsCache | null,
+  homeStats?: TeamRankingsStats | null,
+  awayStats?: TeamRankingsStats | null,
   homeRatings?: any,
   awayRatings?: any
 ): string {
+  const isNeutralSite = game.location === 'neutral';
+
+  // Build location context for AI
+  let locationContext = '';
+  if (isNeutralSite) {
+    locationContext = 'Venue: NEUTRAL SITE (no home court advantage for either team)';
+  } else if (game.location === 'home') {
+    locationContext = `Venue: ${game.homeTeam.name} HOME COURT (${game.homeTeam.name} has home court advantage)`;
+  } else {
+    locationContext = `Venue: ${game.awayTeam.name} HOME COURT (${game.awayTeam.name} has home court advantage)`;
+  }
+
   const baseInfo = `
 Predict the ${half} half score for this college basketball game:
 
@@ -270,65 +295,43 @@ Predict the ${half} half score for this college basketball game:
 vs
 **${game.homeTeam.name}** ${game.homeTeam.rank ? `(#${game.homeTeam.rank})` : ''}
 
-Location: ${game.location.toUpperCase()}
+${locationContext}
 Date: ${new Date(game.date).toLocaleDateString()}
 `;
 
-  // Build stats section
-  let statsInfo = '\n**Team Statistics and Ratings:**\n\n';
+  // Build ratings section
+  let ratingsInfo = '\n**Team Ratings:**\n';
+  ratingsInfo += `${game.awayTeam.name}: KenPom ${awayRatings?.kenPom || 'N/A'}, NET ${awayRatings?.net || 'N/A'}, BPI ${awayRatings?.bpi || 'N/A'}\n`;
+  ratingsInfo += `${game.homeTeam.name}: KenPom ${homeRatings?.kenPom || 'N/A'}, NET ${homeRatings?.net || 'N/A'}, BPI ${homeRatings?.bpi || 'N/A'}\n`;
 
-  // Away team
-  statsInfo += `**${game.awayTeam.name}:**\n`;
-  if (awayRatings) {
-    statsInfo += `- KenPom: ${awayRatings.kenPom || 'N/A'}\n`;
-    statsInfo += `- NET: ${awayRatings.net || 'N/A'}\n`;
-    statsInfo += `- BPI: ${awayRatings.bpi || 'N/A'}\n`;
-  }
-  if (awayStats) {
-    statsInfo += `- Season Averages (${awayStats.seasonAverages.firstHalf.gamesPlayed} games):\n`;
-    statsInfo += `  - 1st Half: ${awayStats.seasonAverages.firstHalf.scored} scored, ${awayStats.seasonAverages.firstHalf.allowed} allowed\n`;
-    statsInfo += `  - 2nd Half: ${awayStats.seasonAverages.secondHalf.scored} scored, ${awayStats.seasonAverages.secondHalf.allowed} allowed\n`;
-    statsInfo += `- Last 5 Games:\n`;
-    statsInfo += `  - 1st Half: ${awayStats.last5Averages.firstHalf.scored} scored, ${awayStats.last5Averages.firstHalf.allowed} allowed\n`;
-    statsInfo += `  - 2nd Half: ${awayStats.last5Averages.secondHalf.scored} scored, ${awayStats.last5Averages.secondHalf.allowed} allowed\n`;
-    if (awayStats.strengthOfSchedule) {
-      statsInfo += `- Strength of Schedule: ${awayStats.strengthOfSchedule.average.toFixed(1)} avg (${awayStats.strengthOfSchedule.gamesWithRatings}/${awayStats.games.length} games rated)\n`;
-    }
-  }
+  // Build TeamRankings stats section using the service formatter
+  const statsInfo = formatMatchupStatsForPrompt(homeStats ?? null, awayStats ?? null, isNeutralSite);
 
-  statsInfo += `\n**${game.homeTeam.name}:**\n`;
-  if (homeRatings) {
-    statsInfo += `- KenPom: ${homeRatings.kenPom || 'N/A'}\n`;
-    statsInfo += `- NET: ${homeRatings.net || 'N/A'}\n`;
-    statsInfo += `- BPI: ${homeRatings.bpi || 'N/A'}\n`;
-  }
-  if (homeStats) {
-    statsInfo += `- Season Averages (${homeStats.seasonAverages.firstHalf.gamesPlayed} games):\n`;
-    statsInfo += `  - 1st Half: ${homeStats.seasonAverages.firstHalf.scored} scored, ${homeStats.seasonAverages.firstHalf.allowed} allowed\n`;
-    statsInfo += `  - 2nd Half: ${homeStats.seasonAverages.secondHalf.scored} scored, ${homeStats.seasonAverages.secondHalf.allowed} allowed\n`;
-    statsInfo += `- Last 5 Games:\n`;
-    statsInfo += `  - 1st Half: ${homeStats.last5Averages.firstHalf.scored} scored, ${homeStats.last5Averages.firstHalf.allowed} allowed\n`;
-    statsInfo += `  - 2nd Half: ${homeStats.last5Averages.secondHalf.scored} scored, ${homeStats.last5Averages.secondHalf.allowed} allowed\n`;
-    if (homeStats.strengthOfSchedule) {
-      statsInfo += `- Strength of Schedule: ${homeStats.strengthOfSchedule.average.toFixed(1)} avg (${homeStats.strengthOfSchedule.gamesWithRatings}/${homeStats.games.length} games rated)\n`;
-    }
-  }
-
-  statsInfo += '\n**Important:** Consider strength of schedule when evaluating stats. Stats against weaker opponents should be taken with a grain of salt.\n';
+  const analysisNotes = `
+**Analysis Notes:**
+- PPG = Points Per Game for that half
+- Allowed = Points allowed per game for that half
+- Margin = Average scoring margin (positive = outscoring opponents)
+- Recent form (Last 3 games) may indicate momentum shifts
+- Home/Away splits show location-dependent performance`;
 
   if (half === '1st') {
-    return `${baseInfo}${statsInfo}
+    return `${baseInfo}${ratingsInfo}
+${statsInfo}
+${analysisNotes}
 
-Provide a predicted score for the END of the 1st half. Consider the team ratings, recent form (last 5 games), and strength of schedule.`;
+Predict the score at the END of the 1st half. Focus on 1st half stats for both teams.`;
   } else {
     return `${baseInfo}
-
 **Halftime Score:**
 - ${game.awayTeam.name}: ${halftimeAwayScore}
 - ${game.homeTeam.name}: ${halftimeHomeScore}
 
+${ratingsInfo}
 ${statsInfo}
+${analysisNotes}
 
-Based on the halftime score, team ratings, and performance trends, predict the FINAL score at the end of the game (not just 2nd half points, but total final score). Consider momentum from the first half.`;
+Based on the halftime score and 2nd half performance trends, predict the FINAL score at the end of the game.
+Focus on 2nd half stats - some teams perform very differently in the 2nd half.`;
   }
 }

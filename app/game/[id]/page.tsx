@@ -12,7 +12,6 @@ export default function GameDetailPage() {
   const gameId = params.id as string;
 
   const [game, setGame] = useState<Game | null>(null);
-  const [editingLocation, setEditingLocation] = useState(false);
   const [loading, setLoading] = useState(true);
   const [prediction, setPrediction] = useState<PredictionResponse | null>(null);
 
@@ -38,7 +37,6 @@ export default function GameDetailPage() {
   const handleLocationChange = (newLocation: LocationType) => {
     if (game) {
       setGame({ ...game, location: newLocation });
-      setEditingLocation(false);
     }
   };
 
@@ -91,27 +89,20 @@ export default function GameDetailPage() {
                 minute: '2-digit',
               })}
             </div>
-            <div className="flex items-center gap-2">
-              {editingLocation ? (
-                <select
-                  value={game.location}
-                  onChange={(e) => handleLocationChange(e.target.value as LocationType)}
-                  className="px-3 py-1 border rounded text-sm"
-                  autoFocus
-                >
-                  <option value="home">Home</option>
-                  <option value="away">Away</option>
-                  <option value="neutral">Neutral</option>
-                </select>
-              ) : (
-                <button
-                  onClick={() => setEditingLocation(true)}
-                  className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded"
-                >
-                  {game.location.toUpperCase()} ✏️
-                </button>
-              )}
-            </div>
+
+            {/* Neutral Site Toggle */}
+            <label className="flex items-center gap-2 cursor-pointer">
+              <span className="text-sm text-gray-600">Neutral Site</span>
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  checked={game.location === 'neutral'}
+                  onChange={(e) => handleLocationChange(e.target.checked ? 'neutral' : 'home')}
+                  className="sr-only peer"
+                />
+                <div className="w-10 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-orange-500"></div>
+              </div>
+            </label>
           </div>
 
           {/* Teams */}

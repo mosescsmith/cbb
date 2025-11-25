@@ -68,6 +68,10 @@ export interface PredictionResponse {
     model: string;           // Display name (e.g., "DeepSeek V3")
     modelName: string;       // API name (e.g., "deepseek-chat")
     totalTime: string;       // Time taken (e.g., "1.23s")
+    stats?: {
+      home: { matched: string; confidence: number } | null;
+      away: { matched: string; confidence: number } | null;
+    };
   };
 }
 

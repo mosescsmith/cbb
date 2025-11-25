@@ -1,0 +1,121 @@
+{
+  "teamId": "1824",
+  "teamName": "University of Kansas",
+  "lastUpdated": "2025-11-25T20:29:09.580Z",
+  "games": [
+    {
+      "gameId": "6501504",
+      "date": "",
+      "opponent": "Notre Dame",
+      "opponentId": "1281",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 32,
+        "allowed": 29
+      }
+    },
+    {
+      "gameId": "6501515",
+      "date": "",
+      "opponent": "Duke",
+      "opponentId": "1782",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6501514",
+      "date": "",
+      "opponent": "Princeton",
+      "opponentId": "1297",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 28
+      }
+    },
+    {
+      "gameId": "6529265",
+      "date": "",
+      "opponent": "A&M-Corpus Christi",
+      "opponentId": "1386",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 18
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 28
+      }
+    },
+    {
+      "gameId": "6501513",
+      "date": "",
+      "opponent": "North Carolina",
+      "opponentId": "1621",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 58
+      }
+    },
+    {
+      "gameId": "6501512",
+      "date": "",
+      "opponent": "Green Bay",
+      "opponentId": "2231",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 48,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 24
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 38.7,
+      "allowed": 29.3,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 37.7,
+      "allowed": 34,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 36.8,
+      "allowed": 29.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 36,
+      "allowed": 36,
+      "gamesPlayed": 5
+    }
+  }
+}

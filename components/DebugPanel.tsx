@@ -17,7 +17,7 @@ export function DebugPanel() {
     // Load initial logs
     setLogs(debugLogger.getLogs());
 
-    return unsubscribe;
+    return () => { unsubscribe(); };
   }, []);
 
   useEffect(() => {

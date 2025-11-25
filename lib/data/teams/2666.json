@@ -1,0 +1,106 @@
+{
+  "teamId": "2666",
+  "teamName": "Syracuse University",
+  "lastUpdated": "2025-11-25T20:29:09.594Z",
+  "games": [
+    {
+      "gameId": "6502582",
+      "date": "",
+      "opponent": "Houston",
+      "opponentId": "2157",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 30
+      }
+    },
+    {
+      "gameId": "6504687",
+      "date": "",
+      "opponent": "Monmouth",
+      "opponentId": "547",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6503552",
+      "date": "",
+      "opponent": "Drexel",
+      "opponentId": "731",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 18
+      }
+    },
+    {
+      "gameId": "6503543",
+      "date": "",
+      "opponent": "Delaware St.",
+      "opponentId": "2435",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 17
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 26
+      }
+    },
+    {
+      "gameId": "6503536",
+      "date": "",
+      "opponent": "Binghamton",
+      "opponentId": "2534",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 32,
+        "allowed": 14
+      },
+      "secondHalf": {
+        "scored": 53,
+        "allowed": 33
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 35.8,
+      "allowed": 26.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 42.8,
+      "allowed": 29.4,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 35.8,
+      "allowed": 26.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 42.8,
+      "allowed": 29.4,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -49,8 +49,8 @@ export async function fetchGamesForDate(date: Date): Promise<Game[]> {
         location: 'home', // Default to home; user can edit
         status: mapGameStatus(g.gameState),
         currentPeriod: g.currentPeriod,
-        homeScore: g.home.score ? parseInt(g.home.score) : undefined,
-        awayScore: g.away.score ? parseInt(g.away.score) : undefined,
+        homeScore: g.home.score ?? undefined,
+        awayScore: g.away.score ?? undefined,
       };
     });
 

@@ -1,0 +1,121 @@
+{
+  "teamId": "1354",
+  "teamName": "The University of Tulsa",
+  "lastUpdated": "2025-11-25T19:21:23.032Z",
+  "games": [
+    {
+      "gameId": "6505322",
+      "date": "",
+      "opponent": "San Jose St.",
+      "opponentId": "260",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 43,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": null,
+        "allowed": null
+      }
+    },
+    {
+      "gameId": "6505321",
+      "date": "",
+      "opponent": "Austin Peay",
+      "opponentId": "464",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6503361",
+      "date": "",
+      "opponent": "Kansas St.",
+      "opponentId": "771",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 49,
+        "allowed": 45
+      }
+    },
+    {
+      "gameId": "6504124",
+      "date": "",
+      "opponent": "Oral Roberts",
+      "opponentId": "1290",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 45,
+        "allowed": 49
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6505319",
+      "date": "",
+      "opponent": "Rhode Island",
+      "opponentId": "2307",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6505318",
+      "date": "",
+      "opponent": "Okla. Christian",
+      "opponentId": "261812",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 52,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 27
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 40.5,
+      "allowed": 36.7,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 38.2,
+      "allowed": 38,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "teamId": "260",
+  "teamName": "San Jose State University",
+  "lastUpdated": "2025-11-25T19:21:36.248Z",
+  "games": [
+    {
+      "gameId": "6505322",
+      "date": "",
+      "opponent": "Tulsa",
+      "opponentId": "1354",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 43
+      },
+      "secondHalf": {
+        "scored": null,
+        "allowed": null
+      }
+    },
+    {
+      "gameId": "6505519",
+      "date": "",
+      "opponent": "Southern U.",
+      "opponentId": "957",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 42,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6505518",
+      "date": "",
+      "opponent": "Bethesda (CA)",
+      "opponentId": "53667",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 54,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 56,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6504993",
+      "date": "",
+      "opponent": "Michigan St.",
+      "opponentId": "1163",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 23,
+        "allowed": 46
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 33
+      }
+    },
+    {
+      "gameId": "6502285",
+      "date": "",
+      "opponent": "UC Santa Barbara",
+      "opponentId": "1061",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 45
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6503426",
+      "date": "",
+      "opponent": "Utah",
+      "opponentId": "2354",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 44
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 40
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 36.3,
+      "allowed": 39.5,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 36,
+      "allowed": 38.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 5
+    }
+  }
+}

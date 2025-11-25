@@ -29,7 +29,7 @@ export default function HomePage() {
     }
   };
 
-  // Check stats availability for all games
+  // Check stats availability for all games using TeamRankings data
   const checkStatsAvailability = async () => {
     if (games.length === 0) return;
 
@@ -46,8 +46,9 @@ export default function HomePage() {
           const homeData = homeRes.ok ? await homeRes.json() : null;
           const awayData = awayRes.ok ? await awayRes.json() : null;
 
-          const homeHasStats = homeData?._meta?.matched && (homeData?.games?.length || 0) > 0;
-          const awayHasStats = awayData?._meta?.matched && (awayData?.games?.length || 0) > 0;
+          // Both teams need to have matched in TeamRankings data
+          const homeHasStats = homeData?._meta?.matched === true;
+          const awayHasStats = awayData?._meta?.matched === true;
 
           return { ...game, hasVerifiedStats: homeHasStats && awayHasStats };
         } catch {
