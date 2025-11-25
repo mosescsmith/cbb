@@ -1,0 +1,106 @@
+{
+  "teamId": "1918",
+  "teamName": "Kennesaw State University",
+  "lastUpdated": "2025-11-25T17:47:30.961Z",
+  "games": [
+    {
+      "gameId": "6505109",
+      "date": "",
+      "opponent": "Rice",
+      "opponentId": "1307",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 42
+      }
+    },
+    {
+      "gameId": "6505108",
+      "date": "",
+      "opponent": "South Fla.",
+      "opponentId": "611",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 56
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 52
+      }
+    },
+    {
+      "gameId": "6505107",
+      "date": "",
+      "opponent": "Point U.",
+      "opponentId": "56145",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 52,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 59,
+        "allowed": 24
+      }
+    },
+    {
+      "gameId": "6505106",
+      "date": "",
+      "opponent": "Florida A&M",
+      "opponentId": "1481",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 48,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6505105",
+      "date": "",
+      "opponent": "Paine",
+      "opponentId": "1388165",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 60,
+        "allowed": 10
+      },
+      "secondHalf": {
+        "scored": 45,
+        "allowed": 19
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 48.2,
+      "allowed": 35.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 47.8,
+      "allowed": 35,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 48.2,
+      "allowed": 35.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 47.8,
+      "allowed": 35,
+      "gamesPlayed": 5
+    }
+  }
+}

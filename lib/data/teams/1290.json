@@ -1,0 +1,136 @@
+{
+  "teamId": "1290",
+  "teamName": "Oral Roberts University",
+  "lastUpdated": "2025-11-25T17:47:31.364Z",
+  "games": [
+    {
+      "gameId": "6502188",
+      "date": "",
+      "opponent": "FGCU",
+      "opponentId": "1389",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 49,
+        "allowed": 52
+      }
+    },
+    {
+      "gameId": "6530222",
+      "date": "",
+      "opponent": "Oklahoma",
+      "opponentId": "2290",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 24,
+        "allowed": 42
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 53
+      }
+    },
+    {
+      "gameId": "6504126",
+      "date": "",
+      "opponent": "Haskell",
+      "opponentId": "16530",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 23
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6504125",
+      "date": "",
+      "opponent": "Belmont",
+      "opponentId": "2085",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 42
+      },
+      "secondHalf": {
+        "scored": 21,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6504124",
+      "date": "",
+      "opponent": "Tulsa",
+      "opponentId": "1354",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 45
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 43
+      }
+    },
+    {
+      "gameId": "6504217",
+      "date": "",
+      "opponent": "John Brown",
+      "opponentId": "53442",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 17
+      }
+    },
+    {
+      "gameId": "6503953",
+      "date": "",
+      "opponent": "Oklahoma St.",
+      "opponentId": "922",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 46,
+        "allowed": 50
+      },
+      "secondHalf": {
+        "scored": 25,
+        "allowed": 45
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 39.6,
+      "allowed": 39.4,
+      "gamesPlayed": 7
+    },
+    "secondHalf": {
+      "scored": 38.3,
+      "allowed": 41.7,
+      "gamesPlayed": 7
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 38.2,
+      "allowed": 38.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 39.8,
+      "allowed": 46,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -113,16 +113,25 @@ export async function fetchGameDetail(gameId: string): Promise<Game | null> {
       halftimeAwayScore = parseInt(period1.visit);
     }
 
-    // Current scores (sum of all periods)
-    let homeScore = 0;
-    let awayScore = 0;
+    // Current scores (sum of all periods) - only set if game has started
+    let homeScore: number | undefined;
+    let awayScore: number | undefined;
 
-    if (contest.linescores) {
+    if (contest.linescores && contest.linescores.length > 0) {
+      homeScore = 0;
+      awayScore = 0;
       contest.linescores.forEach((period: any) => {
-        homeScore += parseInt(period.home || 0);
-        awayScore += parseInt(period.visit || 0);
+        homeScore! += parseInt(period.home || 0);
+        awayScore! += parseInt(period.visit || 0);
       });
     }
+
+    // Determine game status from contest data
+    const gameState = contest.gameState?.toLowerCase() || '';
+    let status: Game['status'] = 'scheduled';
+    if (gameState.includes('final')) status = 'final';
+    else if (gameState.includes('half')) status = 'halftime';
+    else if (gameState.includes('live') || gameState.includes('progress') || contest.linescores?.length > 0) status = 'in_progress';
 
     return {
       id: contest.id,
@@ -138,7 +147,7 @@ export async function fetchGameDetail(gameId: string): Promise<Game | null> {
         shortName: awayTeam.nameShort,
       } as Team,
       location: 'home',
-      status: 'in_progress', // Can be refined based on contest data
+      status,
       homeScore,
       awayScore,
       halftimeHomeScore,
