@@ -202,6 +202,8 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
           // Pass team name overrides if user selected from suggestions
           homeTeamOverride: homeTeamOverride || undefined,
           awayTeamOverride: awayTeamOverride || undefined,
+          // Pass neutral site setting from client (user may have toggled it)
+          isNeutralSite: game.location === 'neutral',
           debug: debugEnabled,
         }),
       });

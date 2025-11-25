@@ -19,10 +19,12 @@ export async function POST(request: NextRequest) {
       halftimeAwayScore,
       homeTeamOverride,
       awayTeamOverride,
+      isNeutralSite,
       debug,
     } = body as PredictionRequest & {
       homeTeamOverride?: string;
       awayTeamOverride?: string;
+      isNeutralSite?: boolean;
     };
 
     const log = (message: string, data?: any) => {
@@ -103,6 +105,15 @@ export async function POST(request: NextRequest) {
       awayHasRatings: !!awayRatings,
     });
 
+    // Determine neutral site: use client-provided value, fallback to game data
+    const neutralSite = isNeutralSite ?? (game.location === 'neutral');
+
+    log('Building prompt', {
+      isNeutralSite: neutralSite,
+      clientProvided: isNeutralSite,
+      gameLocation: game.location,
+    });
+
     // Build prompt for AI prediction
     const prompt = buildPredictionPrompt(
       game,
@@ -112,7 +123,8 @@ export async function POST(request: NextRequest) {
       homeTeamStats,
       awayTeamStats,
       homeRatings,
-      awayRatings
+      awayRatings,
+      neutralSite
     );
 
     if (debug) {
@@ -274,9 +286,9 @@ function buildPredictionPrompt(
   homeStats?: TeamRankingsStats | null,
   awayStats?: TeamRankingsStats | null,
   homeRatings?: any,
-  awayRatings?: any
+  awayRatings?: any,
+  isNeutralSite: boolean = false
 ): string {
-  const isNeutralSite = game.location === 'neutral';
 
   // Build location context for AI
   let locationContext = '';
