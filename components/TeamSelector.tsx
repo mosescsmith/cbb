@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 interface TeamSuggestion {
   name: string;
@@ -9,6 +9,7 @@ interface TeamSuggestion {
 
 interface TeamSelectorProps {
   teamName: string;
+  teamId: string;
   suggestions: TeamSuggestion[];
   onSelect: (selectedTeamName: string) => void;
   disabled?: boolean;
@@ -16,23 +17,85 @@ interface TeamSelectorProps {
 
 export function TeamSelector({
   teamName,
-  suggestions,
+  teamId,
+  suggestions: initialSuggestions,
   onSelect,
   disabled = false,
 }: TeamSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<TeamSuggestion[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
+
+  // Use search results if available, otherwise use initial suggestions
+  const suggestions = searchResults.length > 0 ? searchResults : initialSuggestions;
 
   const handleSelect = (suggestion: TeamSuggestion) => {
     setSelectedTeam(suggestion.name);
     setIsOpen(false);
+    setShowSearch(false);
+    setSearchQuery('');
+    setSearchResults([]);
     onSelect(suggestion.name);
   };
 
-  if (suggestions.length === 0) {
+  const handleSearch = useCallback(async () => {
+    if (!searchQuery.trim()) return;
+
+    setIsSearching(true);
+    setSearchError(null);
+
+    try {
+      const response = await fetch(
+        `/api/team-stats/${teamId}?teamName=${encodeURIComponent(searchQuery.trim())}`
+      );
+      const data = await response.json();
+
+      if (data._meta?.matched) {
+        // Exact match found - select it directly
+        setSelectedTeam(data.teamName);
+        setIsOpen(false);
+        setShowSearch(false);
+        setSearchQuery('');
+        setSearchResults([]);
+        onSelect(data.teamName);
+      } else if (data.suggestions && data.suggestions.length > 0) {
+        // Fuzzy matches found
+        setSearchResults(data.suggestions);
+      } else {
+        setSearchError('No teams found matching your search');
+        setSearchResults([]);
+      }
+    } catch {
+      setSearchError('Search failed. Please try again.');
+    } finally {
+      setIsSearching(false);
+    }
+  }, [searchQuery, teamId, onSelect]);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSearch();
+    }
+  };
+
+  if (initialSuggestions.length === 0 && !showSearch) {
     return (
-      <div className="text-xs text-red-600">
-        No similar teams found
+      <div className="space-y-2">
+        <div className="text-xs text-red-600">
+          No similar teams found
+        </div>
+        <button
+          onClick={() => setShowSearch(true)}
+          disabled={disabled}
+          className="text-xs text-blue-600 hover:text-blue-800 underline"
+        >
+          Search manually
+        </button>
       </div>
     );
   }
@@ -75,13 +138,51 @@ export function TeamSelector({
 
       {/* Dropdown */}
       {isOpen && !disabled && (
-        <div className="absolute z-50 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-          <div className="px-3 py-2 text-xs text-gray-500 border-b bg-gray-50">
-            Select matching team:
+        <div className="absolute z-50 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-80 overflow-y-auto">
+          {/* Search Input Section */}
+          <div className="px-3 py-2 border-b bg-gray-50">
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder="Search team name..."
+                className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                autoFocus={showSearch}
+              />
+              <button
+                onClick={handleSearch}
+                disabled={isSearching || !searchQuery.trim()}
+                className={`
+                  px-3 py-1 text-sm rounded
+                  ${isSearching || !searchQuery.trim()
+                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                    : 'bg-blue-500 text-white hover:bg-blue-600'}
+                `}
+              >
+                {isSearching ? '...' : 'Search'}
+              </button>
+            </div>
+            {searchError && (
+              <div className="mt-1 text-xs text-red-600">{searchError}</div>
+            )}
+            {searchResults.length > 0 && (
+              <div className="mt-1 text-xs text-green-600">
+                Found {searchResults.length} matches
+              </div>
+            )}
           </div>
+
+          {/* Suggestions Header */}
+          <div className="px-3 py-2 text-xs text-gray-500 border-b">
+            {searchResults.length > 0 ? 'Search results:' : 'Suggested matches:'}
+          </div>
+
+          {/* Suggestions List */}
           {suggestions.map((suggestion, idx) => (
             <button
-              key={idx}
+              key={`${suggestion.name}-${idx}`}
               onClick={() => handleSelect(suggestion)}
               className={`
                 w-full px-3 py-2 text-left text-sm hover:bg-blue-50

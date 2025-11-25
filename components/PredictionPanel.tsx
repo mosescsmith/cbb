@@ -324,6 +324,7 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
               ) : awayStatsStatus?.suggestions && awayStatsStatus.suggestions.length > 0 ? (
                 <TeamSelector
                   teamName={game.awayTeam.name}
+                  teamId={game.awayTeam.id}
                   suggestions={awayStatsStatus.suggestions}
                   onSelect={(name) => handleTeamSelect(false, name, game.awayTeam.id)}
                   disabled={loading}
@@ -351,6 +352,7 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
               ) : homeStatsStatus?.suggestions && homeStatsStatus.suggestions.length > 0 ? (
                 <TeamSelector
                   teamName={game.homeTeam.name}
+                  teamId={game.homeTeam.id}
                   suggestions={homeStatsStatus.suggestions}
                   onSelect={(name) => handleTeamSelect(true, name, game.homeTeam.id)}
                   disabled={loading}
