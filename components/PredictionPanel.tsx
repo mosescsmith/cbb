@@ -49,6 +49,10 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
   const [homeTeamOverride, setHomeTeamOverride] = useState<string | null>(null);
   const [awayTeamOverride, setAwayTeamOverride] = useState<string | null>(null);
 
+  // Edit mode for matched teams (to allow changing even auto-matched teams)
+  const [editingHomeTeam, setEditingHomeTeam] = useState(false);
+  const [editingAwayTeam, setEditingAwayTeam] = useState(false);
+
   // Load debug preference on mount
   useEffect(() => {
     setDebugEnabled(debugLogger.isDebugEnabled());
@@ -79,11 +83,13 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
     selectedTeamName: string,
     teamId: string
   ) => {
-    // Set the override
+    // Set the override and exit edit mode
     if (isHome) {
       setHomeTeamOverride(selectedTeamName);
+      setEditingHomeTeam(false);
     } else {
       setAwayTeamOverride(selectedTeamName);
+      setEditingAwayTeam(false);
     }
 
     // Re-fetch stats with the selected team name
@@ -308,9 +314,26 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
             {/* Away Team Stats */}
             <div>
               <div className="text-xs text-gray-500 mb-1 text-center">{game.awayTeam.name}</div>
-              {awayStatsStatus?.matched ? (
+              {editingAwayTeam ? (
+                <TeamSelector
+                  teamName={awayStatsStatus?.matchedName || game.awayTeam.name}
+                  teamId={game.awayTeam.id}
+                  suggestions={[]}
+                  onSelect={(name) => handleTeamSelect(false, name, game.awayTeam.id)}
+                  disabled={loading}
+                />
+              ) : awayStatsStatus?.matched ? (
                 <div className="text-center">
-                  <div className="text-sm font-bold text-green-600">✓ Found</div>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-sm font-bold text-green-600">✓ Found</span>
+                    <button
+                      onClick={() => setEditingAwayTeam(true)}
+                      disabled={loading}
+                      className="text-xs text-blue-600 hover:text-blue-800 underline disabled:opacity-50"
+                    >
+                      Edit
+                    </button>
+                  </div>
                   {awayStatsStatus.matchedName && awayStatsStatus.matchedName !== game.awayTeam.name && (
                     <div className="text-xs text-gray-500">as &quot;{awayStatsStatus.matchedName}&quot;</div>
                   )}
@@ -336,9 +359,26 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
             {/* Home Team Stats */}
             <div>
               <div className="text-xs text-gray-500 mb-1 text-center">{game.homeTeam.name}</div>
-              {homeStatsStatus?.matched ? (
+              {editingHomeTeam ? (
+                <TeamSelector
+                  teamName={homeStatsStatus?.matchedName || game.homeTeam.name}
+                  teamId={game.homeTeam.id}
+                  suggestions={[]}
+                  onSelect={(name) => handleTeamSelect(true, name, game.homeTeam.id)}
+                  disabled={loading}
+                />
+              ) : homeStatsStatus?.matched ? (
                 <div className="text-center">
-                  <div className="text-sm font-bold text-green-600">✓ Found</div>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-sm font-bold text-green-600">✓ Found</span>
+                    <button
+                      onClick={() => setEditingHomeTeam(true)}
+                      disabled={loading}
+                      className="text-xs text-blue-600 hover:text-blue-800 underline disabled:opacity-50"
+                    >
+                      Edit
+                    </button>
+                  </div>
                   {homeStatsStatus.matchedName && homeStatsStatus.matchedName !== game.homeTeam.name && (
                     <div className="text-xs text-gray-500">as &quot;{homeStatsStatus.matchedName}&quot;</div>
                   )}
