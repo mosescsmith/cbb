@@ -1,0 +1,121 @@
+{
+  "teamId": "2085",
+  "teamName": "Belmont",
+  "lastUpdated": "2025-11-24T22:29:05.828Z",
+  "games": [
+    {
+      "gameId": "6505643",
+      "date": "",
+      "opponent": "Saint Francis",
+      "opponentId": "2635",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 58,
+        "allowed": 29
+      }
+    },
+    {
+      "gameId": "6505641",
+      "date": "",
+      "opponent": "Fisk",
+      "opponentId": "16500",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 46,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 24
+      }
+    },
+    {
+      "gameId": "6505639",
+      "date": "",
+      "opponent": "Lipscomb",
+      "opponentId": "2377",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 44
+      }
+    },
+    {
+      "gameId": "6504125",
+      "date": "",
+      "opponent": "Oral Roberts",
+      "opponentId": "1290",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 42,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 21
+      }
+    },
+    {
+      "gameId": "6505638",
+      "date": "",
+      "opponent": "Tennessee St.",
+      "opponentId": "623",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 53,
+        "allowed": 47
+      }
+    },
+    {
+      "gameId": "6502342",
+      "date": "",
+      "opponent": "Air Force",
+      "opponentId": "968",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 40,
+        "allowed": 25
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 37,
+      "allowed": 31,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 48.7,
+      "allowed": 31.7,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 36.6,
+      "allowed": 29.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 50.4,
+      "allowed": 33,
+      "gamesPlayed": 5
+    }
+  }
+}

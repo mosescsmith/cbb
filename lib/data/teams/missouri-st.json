@@ -1,0 +1,121 @@
+{
+  "teamId": "missouri-st",
+  "teamName": "Missouri St.",
+  "lastUpdated": "2025-11-25T02:08:54.052Z",
+  "games": [
+    {
+      "gameId": "6501271",
+      "date": "",
+      "opponent": "LIU",
+      "opponentId": "1139",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 0,
+        "allowed": 3
+      }
+    },
+    {
+      "gameId": "6530171",
+      "date": "",
+      "opponent": "UTRGV",
+      "opponentId": "1293",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6505281",
+      "date": "",
+      "opponent": "UT Arlington",
+      "opponentId": "288",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 24,
+        "allowed": 33
+      }
+    },
+    {
+      "gameId": "6504937",
+      "date": "",
+      "opponent": "Arkansas St.",
+      "opponentId": "1863",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 46,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 53
+      }
+    },
+    {
+      "gameId": "6502717",
+      "date": "",
+      "opponent": "Northwestern Okla.",
+      "opponentId": "261791",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 55,
+        "allowed": 21
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6504955",
+      "date": "",
+      "opponent": "Mo. Southern St.",
+      "opponentId": "1427",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 43
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 27
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 39,
+      "allowed": 32.7,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 34.7,
+      "allowed": 31.5,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 38.8,
+      "allowed": 30.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 32,
+      "allowed": 32.4,
+      "gamesPlayed": 5
+    }
+  }
+}

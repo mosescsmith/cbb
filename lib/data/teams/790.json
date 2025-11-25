@@ -1,0 +1,91 @@
+{
+  "teamId": "790",
+  "teamName": "Loyola Marymount University",
+  "lastUpdated": "2025-11-25T02:22:51.862Z",
+  "games": [
+    {
+      "gameId": "6506081",
+      "date": "",
+      "opponent": "Fla. Atlantic",
+      "opponentId": "736",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": null,
+        "allowed": null
+      }
+    },
+    {
+      "gameId": "6502294",
+      "date": "",
+      "opponent": "UC Santa Barbara",
+      "opponentId": "1061",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 31,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 29
+      }
+    },
+    {
+      "gameId": "6503424",
+      "date": "",
+      "opponent": "Troy",
+      "opponentId": "2350",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 27,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6505313",
+      "date": "",
+      "opponent": "UTEP",
+      "opponentId": "2017",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 20
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 31.5,
+      "allowed": 36,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 4
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 31.5,
+      "allowed": 36,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 4
+    }
+  }
+}

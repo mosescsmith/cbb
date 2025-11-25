@@ -1,0 +1,136 @@
+{
+  "teamId": "397",
+  "teamName": "George Washington",
+  "lastUpdated": "2025-11-24T22:54:16.977Z",
+  "games": [
+    {
+      "gameId": "6501709",
+      "date": "",
+      "opponent": "Middle Tenn.",
+      "opponentId": "446",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": null,
+        "allowed": null
+      }
+    },
+    {
+      "gameId": "6501708",
+      "date": "",
+      "opponent": "McNeese",
+      "opponentId": "1533",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 47
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 45
+      }
+    },
+    {
+      "gameId": "6501707",
+      "date": "",
+      "opponent": "UMBC",
+      "opponentId": "438",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 47,
+        "allowed": 17
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6501706",
+      "date": "",
+      "opponent": "Old Dominion",
+      "opponentId": "223",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 44,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 52,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6501705",
+      "date": "",
+      "opponent": "American",
+      "opponentId": "822",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 51,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 56,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6501704",
+      "date": "",
+      "opponent": "South Fla.",
+      "opponentId": "611",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 44,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 55,
+        "allowed": 55
+      }
+    },
+    {
+      "gameId": "6501703",
+      "date": "",
+      "opponent": "Maine",
+      "opponentId": "1834",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 29,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 22
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 43.3,
+      "allowed": 34.7,
+      "gamesPlayed": 7
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 7
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 46,
+      "allowed": 35.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": null,
+      "allowed": null,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "teamId": "2289",
+  "teamName": "Ohio",
+  "lastUpdated": "2025-11-24T22:48:49.084Z",
+  "games": [
+    {
+      "gameId": "6503793",
+      "date": "",
+      "opponent": "Illinois St.",
+      "opponentId": "1817",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 31,
+        "allowed": 31
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6503792",
+      "date": "",
+      "opponent": "Arkansas St.",
+      "opponentId": "1863",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 57
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 35,
+      "allowed": 31.5,
+      "gamesPlayed": 2
+    },
+    "secondHalf": {
+      "scored": 43.5,
+      "allowed": 47,
+      "gamesPlayed": 2
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 35,
+      "allowed": 31.5,
+      "gamesPlayed": 2
+    },
+    "secondHalf": {
+      "scored": 43.5,
+      "allowed": 47,
+      "gamesPlayed": 2
+    }
+  }
+}

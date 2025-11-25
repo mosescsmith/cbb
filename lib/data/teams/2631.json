@@ -1,0 +1,121 @@
+{
+  "teamId": "2631",
+  "teamName": "Rutgers",
+  "lastUpdated": "2025-11-24T22:49:28.513Z",
+  "games": [
+    {
+      "gameId": "6504793",
+      "date": "",
+      "opponent": "Tennessee",
+      "opponentId": "2012",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 56
+      },
+      "secondHalf": {
+        "scored": 30,
+        "allowed": 29
+      }
+    },
+    {
+      "gameId": "6503513",
+      "date": "",
+      "opponent": "Central Conn. St.",
+      "opponentId": "1450",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 26,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6503250",
+      "date": "",
+      "opponent": "American",
+      "opponentId": "822",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6504786",
+      "date": "",
+      "opponent": "Lehigh",
+      "opponentId": "426",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6504782",
+      "date": "",
+      "opponent": "Maine",
+      "opponentId": "1834",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 35,
+        "allowed": 30
+      }
+    },
+    {
+      "gameId": "6504778",
+      "date": "",
+      "opponent": "Rider",
+      "opponentId": "1662",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 35,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 29
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 34,
+      "allowed": 34.8,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 37.8,
+      "allowed": 33.2,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 33.8,
+      "allowed": 37,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 36.2,
+      "allowed": 34,
+      "gamesPlayed": 5
+    }
+  }
+}

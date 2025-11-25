@@ -1,0 +1,106 @@
+{
+  "teamId": "1488",
+  "teamName": "George Mason",
+  "lastUpdated": "2025-11-24T22:48:57.534Z",
+  "games": [
+    {
+      "gameId": "6502462",
+      "date": "",
+      "opponent": "Jacksonville",
+      "opponentId": "2166",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 22
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6531064",
+      "date": "",
+      "opponent": "New Hampshire",
+      "opponentId": "907",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 29,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 32,
+        "allowed": 19
+      }
+    },
+    {
+      "gameId": "6531063",
+      "date": "",
+      "opponent": "Catawba",
+      "opponentId": "156",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 31
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6506439",
+      "date": "",
+      "opponent": "Winthrop",
+      "opponentId": "855",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 43,
+        "allowed": 47
+      },
+      "secondHalf": {
+        "scored": 53,
+        "allowed": 43
+      }
+    },
+    {
+      "gameId": "6502322",
+      "date": "",
+      "opponent": "Wofford",
+      "opponentId": "335",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 29,
+        "allowed": 22
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 24
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 34.4,
+      "allowed": 29.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 44,
+      "allowed": 30.4,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 34.4,
+      "allowed": 29.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 44,
+      "allowed": 30.4,
+      "gamesPlayed": 5
+    }
+  }
+}

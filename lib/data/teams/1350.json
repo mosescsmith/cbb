@@ -1,0 +1,121 @@
+{
+  "teamId": "1350",
+  "teamName": "Towson",
+  "lastUpdated": "2025-11-25T16:42:55.532Z",
+  "games": [
+    {
+      "gameId": "6534059",
+      "date": "",
+      "opponent": "Rhode Island",
+      "opponentId": "2307",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 21
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 34
+      }
+    },
+    {
+      "gameId": "6504074",
+      "date": "",
+      "opponent": "James Madison",
+      "opponentId": "1820",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 45
+      }
+    },
+    {
+      "gameId": "6503272",
+      "date": "",
+      "opponent": "Norfolk St.",
+      "opponentId": "1275",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 22,
+        "allowed": 26
+      },
+      "secondHalf": {
+        "scored": 29,
+        "allowed": 15
+      }
+    },
+    {
+      "gameId": "6530278",
+      "date": "",
+      "opponent": "Wilson",
+      "opponentId": "51670",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 50,
+        "allowed": 26
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6502555",
+      "date": "",
+      "opponent": "Houston",
+      "opponentId": "2157",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 26,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 22,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6529197",
+      "date": "",
+      "opponent": "Loyola Maryland",
+      "opponentId": "1144",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 28
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 31.2,
+      "allowed": 28.3,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 36.2,
+      "allowed": 31.7,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 31.8,
+      "allowed": 28.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 35.6,
+      "allowed": 32.4,
+      "gamesPlayed": 5
+    }
+  }
+}

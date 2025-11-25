@@ -1,0 +1,121 @@
+{
+  "teamId": "489",
+  "teamName": "Buffalo",
+  "lastUpdated": "2025-11-24T22:30:38.433Z",
+  "games": [
+    {
+      "gameId": "6501698",
+      "date": "",
+      "opponent": "VMI",
+      "opponentId": "973",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 31,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6501697",
+      "date": "",
+      "opponent": "Vermont",
+      "opponentId": "2682",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 43
+      },
+      "secondHalf": {
+        "scored": 54,
+        "allowed": 47
+      }
+    },
+    {
+      "gameId": "6501696",
+      "date": "",
+      "opponent": "RIT",
+      "opponentId": "2628",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 50,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 30,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6501695",
+      "date": "",
+      "opponent": "DePaul",
+      "opponentId": "2433",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 18
+      },
+      "secondHalf": {
+        "scored": 30,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6501694",
+      "date": "",
+      "opponent": "Green Bay",
+      "opponentId": "2231",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 32,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 48
+      }
+    },
+    {
+      "gameId": "6500992",
+      "date": "",
+      "opponent": "Southern Miss.",
+      "opponentId": "2654",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 49,
+        "allowed": 41
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 37.5,
+      "allowed": 31.3,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 43.5,
+      "allowed": 40.7,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 37.8,
+      "allowed": 30,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 42.4,
+      "allowed": 40.6,
+      "gamesPlayed": 5
+    }
+  }
+}

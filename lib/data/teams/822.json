@@ -1,0 +1,106 @@
+{
+  "teamId": "822",
+  "teamName": "American",
+  "lastUpdated": "2025-11-24T22:38:37.032Z",
+  "games": [
+    {
+      "gameId": "6503250",
+      "date": "",
+      "opponent": "Rutgers",
+      "opponentId": "2631",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 47
+      }
+    },
+    {
+      "gameId": "6503249",
+      "date": "",
+      "opponent": "Central Penn",
+      "opponentId": "16432",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 58,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 57,
+        "allowed": 18
+      }
+    },
+    {
+      "gameId": "6501705",
+      "date": "",
+      "opponent": "George Washington",
+      "opponentId": "397",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 32,
+        "allowed": 51
+      },
+      "secondHalf": {
+        "scored": 35,
+        "allowed": 56
+      }
+    },
+    {
+      "gameId": "6503247",
+      "date": "",
+      "opponent": "Penn",
+      "opponentId": "1294",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 42,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6502511",
+      "date": "",
+      "opponent": "Wake Forest",
+      "opponentId": "1719",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 46
+      },
+      "secondHalf": {
+        "scored": 40,
+        "allowed": 42
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 39.8,
+      "allowed": 39.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 42.4,
+      "allowed": 40.8,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 39.8,
+      "allowed": 39.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 42.4,
+      "allowed": 40.8,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "teamId": "839",
+  "teamName": "Bethune-Cookman",
+  "lastUpdated": "2025-11-24T22:29:30.605Z",
+  "games": [
+    {
+      "gameId": "6501412",
+      "date": "",
+      "opponent": "Jacksonville",
+      "opponentId": "2166",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 34,
+        "allowed": 39
+      }
+    },
+    {
+      "gameId": "6501411",
+      "date": "",
+      "opponent": "Ohio",
+      "opponentId": "2289",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 44
+      }
+    },
+    {
+      "gameId": "6501410",
+      "date": "",
+      "opponent": "Dayton",
+      "opponentId": "2118",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 45
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6501409",
+      "date": "",
+      "opponent": "Coastal Ga.",
+      "opponentId": "56142",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 52,
+        "allowed": 28
+      }
+    },
+    {
+      "gameId": "6501408",
+      "date": "",
+      "opponent": "Miami (FL)",
+      "opponentId": "801",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 31,
+        "allowed": 50
+      },
+      "secondHalf": {
+        "scored": 30,
+        "allowed": 51
+      }
+    },
+    {
+      "gameId": "6501407",
+      "date": "",
+      "opponent": "Auburn",
+      "opponentId": "460",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 43
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 37.2,
+      "allowed": 37.3,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 40.3,
+      "allowed": 41.8,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 37.2,
+      "allowed": 37.2,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 39.6,
+      "allowed": 41.6,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "teamId": "2540",
+  "teamName": "Bowling Green",
+  "lastUpdated": "2025-11-24T22:47:54.662Z",
+  "games": [
+    {
+      "gameId": "6503622",
+      "date": "",
+      "opponent": "Bucknell",
+      "opponentId": "485",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 35,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 36,
+        "allowed": 42
+      }
+    },
+    {
+      "gameId": "6504702",
+      "date": "",
+      "opponent": "William & Mary",
+      "opponentId": "854",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 26,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6506450",
+      "date": "",
+      "opponent": "Davidson",
+      "opponentId": "372",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 45
+      },
+      "secondHalf": {
+        "scored": 49,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6530690",
+      "date": "",
+      "opponent": "Le Moyne",
+      "opponentId": "1137",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 24
+      }
+    },
+    {
+      "gameId": "6506449",
+      "date": "",
+      "opponent": "Bethany (WV)",
+      "opponentId": "2222",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 56,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 64,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6502487",
+      "date": "",
+      "opponent": "Texas St.",
+      "opponentId": "2007",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 19
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 38.7,
+      "allowed": 34.8,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 47.7,
+      "allowed": 33.8,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 38.4,
+      "allowed": 36,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 48.6,
+      "allowed": 36.8,
+      "gamesPlayed": 5
+    }
+  }
+}

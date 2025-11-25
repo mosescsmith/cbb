@@ -1,0 +1,121 @@
+{
+  "teamId": "284",
+  "teamName": "Stony Brook",
+  "lastUpdated": "2025-11-24T22:47:39.979Z",
+  "games": [
+    {
+      "gameId": "6501189",
+      "date": "",
+      "opponent": "Pacific",
+      "opponentId": "1965",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 20,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 51
+      }
+    },
+    {
+      "gameId": "6501188",
+      "date": "",
+      "opponent": "Brown",
+      "opponentId": "130",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 31,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6501063",
+      "date": "",
+      "opponent": "Yale",
+      "opponentId": "508",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6501187",
+      "date": "",
+      "opponent": "St. Joseph's (L.I.)",
+      "opponentId": "1244",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 55,
+        "allowed": 18
+      },
+      "secondHalf": {
+        "scored": 52,
+        "allowed": 25
+      }
+    },
+    {
+      "gameId": "6501186",
+      "date": "",
+      "opponent": "Maine",
+      "opponentId": "1834",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 23
+      }
+    },
+    {
+      "gameId": "6501004",
+      "date": "",
+      "opponent": "Farmingdale St.",
+      "opponentId": "1728",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 22
+      },
+      "secondHalf": {
+        "scored": 36,
+        "allowed": 37
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 38.3,
+      "allowed": 30.7,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 38.5,
+      "allowed": 36.7,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 40,
+      "allowed": 32.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 39,
+      "allowed": 36.6,
+      "gamesPlayed": 5
+    }
+  }
+}

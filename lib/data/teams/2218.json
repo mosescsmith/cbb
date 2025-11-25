@@ -1,0 +1,91 @@
+{
+  "teamId": "2218",
+  "teamName": "Baylor",
+  "lastUpdated": "2025-11-24T22:30:01.604Z",
+  "games": [
+    {
+      "gameId": "6504377",
+      "date": "",
+      "opponent": "Creighton",
+      "opponentId": "1457",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 44,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6501931",
+      "date": "",
+      "opponent": "Tarleton St.",
+      "opponentId": "541",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 55,
+        "allowed": 42
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 39
+      }
+    },
+    {
+      "gameId": "6504376",
+      "date": "",
+      "opponent": "Washington",
+      "opponentId": "2033",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 40,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6504375",
+      "date": "",
+      "opponent": "UTRGV",
+      "opponentId": "1293",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 46,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 44
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 45.8,
+      "allowed": 36.8,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 41.5,
+      "allowed": 39.5,
+      "gamesPlayed": 4
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 45.8,
+      "allowed": 36.8,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 41.5,
+      "allowed": 39.5,
+      "gamesPlayed": 4
+    }
+  }
+}

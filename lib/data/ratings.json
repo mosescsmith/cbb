@@ -1,0 +1,180 @@
+{
+  "lastUpdated": "2025-01-24",
+  "teams": {
+    "2005": {
+      "name": "Duke",
+      "kenPom": 28.5,
+      "net": 3,
+      "bpi": 27.8,
+      "tRank": 4
+    },
+    "2006": {
+      "name": "UConn",
+      "kenPom": 30.2,
+      "net": 1,
+      "bpi": 29.5,
+      "tRank": 1
+    },
+    "41": {
+      "name": "Kansas",
+      "kenPom": 27.8,
+      "net": 5,
+      "bpi": 26.9,
+      "tRank": 3
+    },
+    "2026": {
+      "name": "Houston",
+      "kenPom": 29.1,
+      "net": 2,
+      "bpi": 28.4,
+      "tRank": 2
+    },
+    "84": {
+      "name": "North Carolina",
+      "kenPom": 26.5,
+      "net": 8,
+      "bpi": 25.7,
+      "tRank": 6
+    },
+    "2633": {
+      "name": "Tennessee",
+      "kenPom": 27.2,
+      "net": 4,
+      "bpi": 27.1,
+      "tRank": 5
+    },
+    "57": {
+      "name": "Kentucky",
+      "kenPom": 25.8,
+      "net": 9,
+      "bpi": 24.9,
+      "tRank": 8
+    },
+    "2390": {
+      "name": "Purdue",
+      "kenPom": 26.9,
+      "net": 6,
+      "bpi": 26.3,
+      "tRank": 7
+    },
+    "8": {
+      "name": "Arizona",
+      "kenPom": 25.1,
+      "net": 11,
+      "bpi": 24.2,
+      "tRank": 10
+    },
+    "127": {
+      "name": "Michigan State",
+      "kenPom": 24.8,
+      "net": 12,
+      "bpi": 23.8,
+      "tRank": 11
+    },
+    "239": {
+      "name": "UCLA",
+      "kenPom": 25.5,
+      "net": 10,
+      "bpi": 24.6,
+      "tRank": 9
+    },
+    "2": {
+      "name": "Alabama",
+      "kenPom": 26.1,
+      "net": 7,
+      "bpi": 25.3,
+      "tRank": 12
+    },
+    "275": {
+      "name": "Wisconsin",
+      "kenPom": 24.2,
+      "net": 15,
+      "bpi": 23.1,
+      "tRank": 13
+    },
+    "254": {
+      "name": "Villanova",
+      "kenPom": 23.8,
+      "net": 16,
+      "bpi": 22.9,
+      "tRank": 15
+    },
+    "2132": {
+      "name": "Creighton",
+      "kenPom": 24.5,
+      "net": 13,
+      "bpi": 23.6,
+      "tRank": 14
+    },
+    "52": {
+      "name": "Illinois",
+      "kenPom": 23.5,
+      "net": 18,
+      "bpi": 22.4,
+      "tRank": 16
+    },
+    "96": {
+      "name": "Marquette",
+      "kenPom": 24.1,
+      "net": 14,
+      "bpi": 23.3,
+      "tRank": 17
+    },
+    "2509": {
+      "name": "Saint Mary's",
+      "kenPom": 22.8,
+      "net": 20,
+      "bpi": 21.9,
+      "tRank": 18
+    },
+    "258": {
+      "name": "Virginia",
+      "kenPom": 23.1,
+      "net": 17,
+      "bpi": 22.2,
+      "tRank": 19
+    },
+    "153": {
+      "name": "Florida",
+      "kenPom": 22.5,
+      "net": 21,
+      "bpi": 21.6,
+      "tRank": 20
+    },
+    "2250": {
+      "name": "Gonzaga",
+      "kenPom": 23.4,
+      "net": 19,
+      "bpi": 22.7,
+      "tRank": 21
+    },
+    "2567": {
+      "name": "San Diego State",
+      "kenPom": 22.1,
+      "net": 23,
+      "bpi": 21.2,
+      "tRank": 22
+    },
+    "344": {
+      "name": "Texas Tech",
+      "kenPom": 22.4,
+      "net": 22,
+      "bpi": 21.5,
+      "tRank": 23
+    },
+    "251": {
+      "name": "Texas",
+      "kenPom": 21.8,
+      "net": 25,
+      "bpi": 20.9,
+      "tRank": 24
+    },
+    "120": {
+      "name": "Michigan",
+      "kenPom": 21.9,
+      "net": 24,
+      "bpi": 21.0,
+      "tRank": 25
+    }
+  }
+}

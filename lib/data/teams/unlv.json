@@ -1,0 +1,106 @@
+{
+  "teamId": "unlv",
+  "teamName": "UNLV",
+  "lastUpdated": "2025-11-25T02:23:49.636Z",
+  "games": [
+    {
+      "gameId": "6501527",
+      "date": "",
+      "opponent": "Saint Joseph's",
+      "opponentId": "1990",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 45,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 54,
+        "allowed": 45
+      }
+    },
+    {
+      "gameId": "6506319",
+      "date": "",
+      "opponent": "Memphis",
+      "opponentId": "99",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 42
+      }
+    },
+    {
+      "gameId": "6504688",
+      "date": "",
+      "opponent": "Montana",
+      "opponentId": "899",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 45,
+        "allowed": 47
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 55
+      }
+    },
+    {
+      "gameId": "6504765",
+      "date": "",
+      "opponent": "Chattanooga",
+      "opponentId": "625",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 47,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 54,
+        "allowed": 33
+      }
+    },
+    {
+      "gameId": "6502535",
+      "date": "",
+      "opponent": "UT Martin",
+      "opponentId": "2013",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 43,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 47
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 45.8,
+      "allowed": 39.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 47.4,
+      "allowed": 44.4,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 45.8,
+      "allowed": 39.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 47.4,
+      "allowed": 44.4,
+      "gamesPlayed": 5
+    }
+  }
+}

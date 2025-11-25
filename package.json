@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "preload-stats": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/preload-team-stats.ts"
   },
   "dependencies": {
     "next": "16.0.4",

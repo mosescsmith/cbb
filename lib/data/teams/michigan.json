@@ -1,0 +1,91 @@
+{
+  "teamId": "michigan",
+  "teamName": "Michigan",
+  "lastUpdated": "2025-11-25T02:23:46.274Z",
+  "games": [
+    {
+      "gameId": "6502292",
+      "date": "",
+      "opponent": "Middle Tenn.",
+      "opponentId": "446",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6503487",
+      "date": "",
+      "opponent": "TCU",
+      "opponentId": "627",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 34,
+        "allowed": 28
+      }
+    },
+    {
+      "gameId": "6502521",
+      "date": "",
+      "opponent": "Wake Forest",
+      "opponentId": "1719",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 47,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6502129",
+      "date": "",
+      "opponent": "Oakland",
+      "opponentId": "1285",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 69,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 52,
+        "allowed": 40
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 46.3,
+      "allowed": 34.3,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 42.3,
+      "allowed": 36.3,
+      "gamesPlayed": 4
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 46.3,
+      "allowed": 34.3,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 42.3,
+      "allowed": 36.3,
+      "gamesPlayed": 4
+    }
+  }
+}

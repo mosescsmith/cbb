@@ -1,0 +1,76 @@
+{
+  "teamId": "san-diego-st",
+  "teamName": "San Diego St.",
+  "lastUpdated": "2025-11-25T02:24:12.618Z",
+  "games": [
+    {
+      "gameId": "6503262",
+      "date": "",
+      "opponent": "Troy",
+      "opponentId": "2350",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 51
+      }
+    },
+    {
+      "gameId": "6501007",
+      "date": "",
+      "opponent": "Idaho St.",
+      "opponentId": "65",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 21
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6501668",
+      "date": "",
+      "opponent": "Long Beach St.",
+      "opponentId": "1057",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 20
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 37.3,
+      "allowed": 28,
+      "gamesPlayed": 3
+    },
+    "secondHalf": {
+      "scored": 42.3,
+      "allowed": 35.7,
+      "gamesPlayed": 3
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 37.3,
+      "allowed": 28,
+      "gamesPlayed": 3
+    },
+    "secondHalf": {
+      "scored": 42.3,
+      "allowed": 35.7,
+      "gamesPlayed": 3
+    }
+  }
+}

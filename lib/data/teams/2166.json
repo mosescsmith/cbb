@@ -1,0 +1,121 @@
+{
+  "teamId": "2166",
+  "teamName": "Jacksonville",
+  "lastUpdated": "2025-11-25T17:32:22.417Z",
+  "games": [
+    {
+      "gameId": "6501412",
+      "date": "",
+      "opponent": "Bethune-Cookman",
+      "opponentId": "839",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 34
+      }
+    },
+    {
+      "gameId": "6502462",
+      "date": "",
+      "opponent": "George Mason",
+      "opponentId": "1488",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 22,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 35,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6502459",
+      "date": "",
+      "opponent": "VMI",
+      "opponentId": "973",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 30,
+        "allowed": 30
+      }
+    },
+    {
+      "gameId": "6501886",
+      "date": "",
+      "opponent": "High Point",
+      "opponentId": "1379",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 44
+      },
+      "secondHalf": {
+        "scored": 27,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6502453",
+      "date": "",
+      "opponent": "Trinity (FL)",
+      "opponentId": "16534",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 74,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 58,
+        "allowed": 20
+      }
+    },
+    {
+      "gameId": "6502450",
+      "date": "",
+      "opponent": "Miami (FL)",
+      "opponentId": "801",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 35,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 34,
+        "allowed": 45
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 39.5,
+      "allowed": 35,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 37.2,
+      "allowed": 36,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 40.4,
+      "allowed": 33.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 37.8,
+      "allowed": 34.2,
+      "gamesPlayed": 5
+    }
+  }
+}

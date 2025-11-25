@@ -1,0 +1,121 @@
+{
+  "teamId": "2012",
+  "teamName": "Tennessee",
+  "lastUpdated": "2025-11-24T22:49:17.936Z",
+  "games": [
+    {
+      "gameId": "6504793",
+      "date": "",
+      "opponent": "Rutgers",
+      "opponentId": "2631",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 56,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 29,
+        "allowed": 30
+      }
+    },
+    {
+      "gameId": "6505178",
+      "date": "",
+      "opponent": "Tennessee St.",
+      "opponentId": "623",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 43,
+        "allowed": 21
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 39
+      }
+    },
+    {
+      "gameId": "6505177",
+      "date": "",
+      "opponent": "Rice",
+      "opponentId": "1307",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 26
+      },
+      "secondHalf": {
+        "scored": 52,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6502392",
+      "date": "",
+      "opponent": "North Florida",
+      "opponentId": "2718",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 47,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 52,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6505173",
+      "date": "",
+      "opponent": "Northern Ky.",
+      "opponentId": "1647",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 52,
+        "allowed": 31
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 25
+      }
+    },
+    {
+      "gameId": "6505170",
+      "date": "",
+      "opponent": "Mercer",
+      "opponentId": "443",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 21
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 40
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 45,
+      "allowed": 26.5,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 44.2,
+      "allowed": 35,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 47.4,
+      "allowed": 27.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 44.4,
+      "allowed": 34,
+      "gamesPlayed": 5
+    }
+  }
+}

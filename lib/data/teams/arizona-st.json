@@ -1,0 +1,61 @@
+{
+  "teamId": "arizona-st",
+  "teamName": "Arizona St.",
+  "lastUpdated": "2025-11-25T02:23:26.856Z",
+  "games": [
+    {
+      "gameId": "6503477",
+      "date": "",
+      "opponent": "Utah Tech",
+      "opponentId": "2714",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6505216",
+      "date": "",
+      "opponent": "Southern Utah",
+      "opponentId": "278",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 36
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 39.5,
+      "allowed": 26.5,
+      "gamesPlayed": 2
+    },
+    "secondHalf": {
+      "scored": 41.5,
+      "allowed": 38.5,
+      "gamesPlayed": 2
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 39.5,
+      "allowed": 26.5,
+      "gamesPlayed": 2
+    },
+    "secondHalf": {
+      "scored": 41.5,
+      "allowed": 38.5,
+      "gamesPlayed": 2
+    }
+  }
+}

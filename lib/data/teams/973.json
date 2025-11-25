@@ -1,0 +1,121 @@
+{
+  "teamId": "973",
+  "teamName": "VMI",
+  "lastUpdated": "2025-11-24T22:31:20.638Z",
+  "games": [
+    {
+      "gameId": "6503755",
+      "date": "",
+      "opponent": "Richmond",
+      "opponentId": "2625",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 26,
+        "allowed": 49
+      },
+      "secondHalf": {
+        "scored": 28,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6502459",
+      "date": "",
+      "opponent": "Jacksonville",
+      "opponentId": "2166",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 30,
+        "allowed": 30
+      }
+    },
+    {
+      "gameId": "6503754",
+      "date": "",
+      "opponent": "Virginia-Lynchburg",
+      "opponentId": "18513",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 66,
+        "allowed": 19
+      }
+    },
+    {
+      "gameId": "6503753",
+      "date": "",
+      "opponent": "Missouri",
+      "opponentId": "1169",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 50
+      },
+      "secondHalf": {
+        "scored": 28,
+        "allowed": 56
+      }
+    },
+    {
+      "gameId": "6502143",
+      "date": "",
+      "opponent": "Southern Ind.",
+      "opponentId": "2331",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6503751",
+      "date": "",
+      "opponent": "JWU Charlotte",
+      "opponentId": "1389233",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 58,
+        "allowed": 15
+      },
+      "secondHalf": {
+        "scored": 64,
+        "allowed": 43
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 38.5,
+      "allowed": 37.5,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 44,
+      "allowed": 37.2,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 34.6,
+      "allowed": 42,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 40,
+      "allowed": 36,
+      "gamesPlayed": 5
+    }
+  }
+}

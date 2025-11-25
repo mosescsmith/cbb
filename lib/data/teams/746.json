@@ -1,0 +1,76 @@
+{
+  "teamId": "746",
+  "teamName": "Grambling",
+  "lastUpdated": "2025-11-24T22:32:15.119Z",
+  "games": [
+    {
+      "gameId": "6503914",
+      "date": "",
+      "opponent": "UC Riverside",
+      "opponentId": "353",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 53
+      }
+    },
+    {
+      "gameId": "6501464",
+      "date": "",
+      "opponent": "California Baptist",
+      "opponentId": "261806",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 22,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6530874",
+      "date": "",
+      "opponent": "Huston-Tillotson",
+      "opponentId": "16533",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 21
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 26
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 33,
+      "allowed": 30.3,
+      "gamesPlayed": 3
+    },
+    "secondHalf": {
+      "scored": 41.7,
+      "allowed": 37,
+      "gamesPlayed": 3
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 33,
+      "allowed": 30.3,
+      "gamesPlayed": 3
+    },
+    "secondHalf": {
+      "scored": 41.7,
+      "allowed": 37,
+      "gamesPlayed": 3
+    }
+  }
+}

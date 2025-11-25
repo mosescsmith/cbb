@@ -1,0 +1,136 @@
+{
+  "teamId": "2506",
+  "teamName": "Massachusetts",
+  "lastUpdated": "2025-11-24T22:49:08.446Z",
+  "games": [
+    {
+      "gameId": "6533948",
+      "date": "",
+      "opponent": "Oregon St.",
+      "opponentId": "1964",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 31
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 34
+      }
+    },
+    {
+      "gameId": "6533951",
+      "date": "",
+      "opponent": "Green Bay",
+      "opponentId": "2231",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6503457",
+      "date": "",
+      "opponent": "Col. of Charleston",
+      "opponentId": "1586",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6503512",
+      "date": "",
+      "opponent": "Central Conn. St.",
+      "opponentId": "1450",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 51,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 49
+      }
+    },
+    {
+      "gameId": "6505482",
+      "date": "",
+      "opponent": "Le Moyne",
+      "opponentId": "1137",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 48,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 42
+      }
+    },
+    {
+      "gameId": "6505481",
+      "date": "",
+      "opponent": "UAlbany",
+      "opponentId": "452",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 45,
+        "allowed": 30
+      }
+    },
+    {
+      "gameId": "6505490",
+      "date": "",
+      "opponent": "Marshall",
+      "opponentId": "1151",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 35,
+        "allowed": 40
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 37.3,
+      "allowed": 32.7,
+      "gamesPlayed": 7
+    },
+    "secondHalf": {
+      "scored": 40.7,
+      "allowed": 40.1,
+      "gamesPlayed": 7
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 37.2,
+      "allowed": 31.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 41,
+      "allowed": 42.2,
+      "gamesPlayed": 5
+    }
+  }
+}

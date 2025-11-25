@@ -1,0 +1,76 @@
+{
+  "teamId": "616",
+  "teamName": "Southern California",
+  "lastUpdated": "2025-11-24T22:58:51.710Z",
+  "games": [
+    {
+      "gameId": "6505491",
+      "date": "",
+      "opponent": "Illinois St.",
+      "opponentId": "1817",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 26
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6505489",
+      "date": "",
+      "opponent": "Manhattan",
+      "opponentId": "94",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 55,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 59,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6505488",
+      "date": "",
+      "opponent": "Cal Poly",
+      "opponentId": "350",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 31
+      },
+      "secondHalf": {
+        "scored": 57,
+        "allowed": 33
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 44,
+      "allowed": 31.3,
+      "gamesPlayed": 3
+    },
+    "secondHalf": {
+      "scored": 54.3,
+      "allowed": 40,
+      "gamesPlayed": 3
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 44,
+      "allowed": 31.3,
+      "gamesPlayed": 3
+    },
+    "secondHalf": {
+      "scored": 54.3,
+      "allowed": 40,
+      "gamesPlayed": 3
+    }
+  }
+}

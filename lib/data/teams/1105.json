@@ -1,0 +1,121 @@
+{
+  "teamId": "1105",
+  "teamName": "FDU",
+  "lastUpdated": "2025-11-24T22:48:28.941Z",
+  "games": [
+    {
+      "gameId": "6505407",
+      "date": "",
+      "opponent": "East Texas A&M",
+      "opponentId": "2442",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 27,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6506289",
+      "date": "",
+      "opponent": "Saint Elizabeth",
+      "opponentId": "58642",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 45,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 55,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6504514",
+      "date": "",
+      "opponent": "NJIT",
+      "opponentId": "2275",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 31,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 58
+      }
+    },
+    {
+      "gameId": "6502859",
+      "date": "",
+      "opponent": "Texas",
+      "opponentId": "2344",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 24,
+        "allowed": 43
+      },
+      "secondHalf": {
+        "scored": 34,
+        "allowed": 50
+      }
+    },
+    {
+      "gameId": "6505391",
+      "date": "",
+      "opponent": "Saint Peter's",
+      "opponentId": "2323",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 29,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 54,
+        "allowed": 55
+      }
+    },
+    {
+      "gameId": "6504393",
+      "date": "",
+      "opponent": "Iowa St.",
+      "opponentId": "414",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 19,
+        "allowed": 45
+      },
+      "secondHalf": {
+        "scored": 31,
+        "allowed": 43
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 31,
+      "allowed": 35.3,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 41.8,
+      "allowed": 47.2,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 33.4,
+      "allowed": 33.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 44,
+      "allowed": 48,
+      "gamesPlayed": 5
+    }
+  }
+}

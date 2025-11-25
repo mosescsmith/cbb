@@ -1,0 +1,121 @@
+{
+  "teamId": "291",
+  "teamName": "Toledo",
+  "lastUpdated": "2025-11-24T22:46:52.779Z",
+  "games": [
+    {
+      "gameId": "6506420",
+      "date": "",
+      "opponent": "Troy",
+      "opponentId": "2350",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 45,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6501912",
+      "date": "",
+      "opponent": "Youngstown St.",
+      "opponentId": "2557",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6501911",
+      "date": "",
+      "opponent": "Detroit Mercy",
+      "opponentId": "1462",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 49,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6505601",
+      "date": "",
+      "opponent": "Wright St.",
+      "opponentId": "1883",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6501910",
+      "date": "",
+      "opponent": "Marshall",
+      "opponentId": "1151",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 55
+      }
+    },
+    {
+      "gameId": "6501909",
+      "date": "",
+      "opponent": "South Alabama",
+      "opponentId": "1326",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 26,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 37
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 35.3,
+      "allowed": 36,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 45.5,
+      "allowed": 40.3,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 37.2,
+      "allowed": 35.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 45,
+      "allowed": 41,
+      "gamesPlayed": 5
+    }
+  }
+}

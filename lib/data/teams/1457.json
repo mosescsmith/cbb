@@ -1,0 +1,106 @@
+{
+  "teamId": "1457",
+  "teamName": "Creighton",
+  "lastUpdated": "2025-11-24T22:30:14.833Z",
+  "games": [
+    {
+      "gameId": "6504377",
+      "date": "",
+      "opponent": "Baylor",
+      "opponentId": "2218",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 44
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6503168",
+      "date": "",
+      "opponent": "North Dakota",
+      "opponentId": "1278",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 47,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 28,
+        "allowed": 24
+      }
+    },
+    {
+      "gameId": "6505139",
+      "date": "",
+      "opponent": "UMES",
+      "opponentId": "1838",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 23
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 22
+      }
+    },
+    {
+      "gameId": "6501177",
+      "date": "",
+      "opponent": "Gonzaga",
+      "opponentId": "1808",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 44
+      },
+      "secondHalf": {
+        "scored": 25,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6505129",
+      "date": "",
+      "opponent": "South Dakota",
+      "opponentId": "2649",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 48,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 41
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 41.2,
+      "allowed": 36.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 36.4,
+      "allowed": 34,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 41.2,
+      "allowed": 36.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 36.4,
+      "allowed": 34,
+      "gamesPlayed": 5
+    }
+  }
+}

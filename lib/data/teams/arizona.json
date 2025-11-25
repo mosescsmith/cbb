@@ -1,0 +1,91 @@
+{
+  "teamId": "arizona",
+  "teamName": "Arizona",
+  "lastUpdated": "2025-11-25T02:23:36.742Z",
+  "games": [
+    {
+      "gameId": "6501197",
+      "date": "",
+      "opponent": "UCLA",
+      "opponentId": "2095",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 25
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6502821",
+      "date": "",
+      "opponent": "Northern Ariz.",
+      "opponentId": "2611",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 46,
+        "allowed": 17
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6503476",
+      "date": "",
+      "opponent": "Utah Tech",
+      "opponentId": "2714",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 44,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 49,
+        "allowed": 30
+      }
+    },
+    {
+      "gameId": "6501196",
+      "date": "",
+      "opponent": "Florida",
+      "opponentId": "1795",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 50,
+        "allowed": 46
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 41
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 42,
+      "allowed": 31.3,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 42.8,
+      "allowed": 35.8,
+      "gamesPlayed": 4
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 42,
+      "allowed": 31.3,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 42.8,
+      "allowed": 35.8,
+      "gamesPlayed": 4
+    }
+  }
+}

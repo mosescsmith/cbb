@@ -1,0 +1,106 @@
+{
+  "teamId": "maryland",
+  "teamName": "Maryland",
+  "lastUpdated": "2025-11-25T02:23:55.239Z",
+  "games": [
+    {
+      "gameId": "6502043",
+      "date": "",
+      "opponent": "Mount St. Mary's",
+      "opponentId": "903",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 45
+      }
+    },
+    {
+      "gameId": "6502526",
+      "date": "",
+      "opponent": "Marquette",
+      "opponentId": "796",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 42,
+        "allowed": 42
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6503711",
+      "date": "",
+      "opponent": "Alcorn",
+      "opponentId": "1860",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6503709",
+      "date": "",
+      "opponent": "Georgetown",
+      "opponentId": "1802",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 27,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6501096",
+      "date": "",
+      "opponent": "Coppin St.",
+      "opponentId": "1089",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 47,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 36,
+        "allowed": 29
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 37.8,
+      "allowed": 33,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 40.8,
+      "allowed": 37.8,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 37.8,
+      "allowed": 33,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 40.8,
+      "allowed": 37.8,
+      "gamesPlayed": 5
+    }
+  }
+}

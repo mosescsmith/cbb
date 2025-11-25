@@ -1,0 +1,91 @@
+{
+  "teamId": "long-island",
+  "teamName": "LIU",
+  "lastUpdated": "2025-11-25T02:08:50.060Z",
+  "games": [
+    {
+      "gameId": "6501268",
+      "date": "",
+      "opponent": "James Madison",
+      "opponentId": "1820",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 56,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 32,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6501267",
+      "date": "",
+      "opponent": "Air Force",
+      "opponentId": "968",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 32,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 39
+      }
+    },
+    {
+      "gameId": "6501265",
+      "date": "",
+      "opponent": "IU Indy",
+      "opponentId": "2717",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 46,
+        "allowed": 53
+      },
+      "secondHalf": {
+        "scored": 48,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6501264",
+      "date": "",
+      "opponent": "Notre Dame",
+      "opponentId": "1281",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 49
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 39.8,
+      "allowed": 41.3,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 41.5,
+      "allowed": 41.3,
+      "gamesPlayed": 4
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 39.8,
+      "allowed": 41.3,
+      "gamesPlayed": 4
+    },
+    "secondHalf": {
+      "scored": 41.5,
+      "allowed": 41.3,
+      "gamesPlayed": 4
+    }
+  }
+}

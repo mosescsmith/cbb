@@ -1,0 +1,106 @@
+{
+  "teamId": "texas",
+  "teamName": "Texas",
+  "lastUpdated": "2025-11-25T02:24:28.178Z",
+  "games": [
+    {
+      "gameId": "6502861",
+      "date": "",
+      "opponent": "Rider",
+      "opponentId": "1662",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 44,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 55,
+        "allowed": 37
+      }
+    },
+    {
+      "gameId": "6502860",
+      "date": "",
+      "opponent": "Kansas City",
+      "opponentId": "2397",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 26
+      },
+      "secondHalf": {
+        "scored": 33,
+        "allowed": 29
+      }
+    },
+    {
+      "gameId": "6502859",
+      "date": "",
+      "opponent": "FDU",
+      "opponentId": "1105",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 43,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 50,
+        "allowed": 34
+      }
+    },
+    {
+      "gameId": "6502858",
+      "date": "",
+      "opponent": "Lafayette",
+      "opponentId": "1132",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 46,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6502857",
+      "date": "",
+      "opponent": "Duke",
+      "opponentId": "1782",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 27,
+        "allowed": 43
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 40.8,
+      "allowed": 27.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 43.2,
+      "allowed": 35,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 40.8,
+      "allowed": 27.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 43.2,
+      "allowed": 35,
+      "gamesPlayed": 5
+    }
+  }
+}

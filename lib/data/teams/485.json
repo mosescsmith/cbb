@@ -1,0 +1,136 @@
+{
+  "teamId": "485",
+  "teamName": "Bucknell",
+  "lastUpdated": "2025-11-24T22:48:09.127Z",
+  "games": [
+    {
+      "gameId": "6503622",
+      "date": "",
+      "opponent": "Bowling Green",
+      "opponentId": "2540",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 24,
+        "allowed": 35
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6503618",
+      "date": "",
+      "opponent": "St. John's (NY)",
+      "opponentId": "1673",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 24,
+        "allowed": 56
+      }
+    },
+    {
+      "gameId": "6503615",
+      "date": "",
+      "opponent": "Pittsburgh",
+      "opponentId": "1658",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 25,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6502878",
+      "date": "",
+      "opponent": "Hofstra",
+      "opponentId": "1813",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 36,
+        "allowed": 49
+      }
+    },
+    {
+      "gameId": "6502317",
+      "date": "",
+      "opponent": "Princeton",
+      "opponentId": "1297",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 27,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6501523",
+      "date": "",
+      "opponent": "Mount St. Mary's",
+      "opponentId": "903",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 35,
+        "allowed": 32
+      }
+    },
+    {
+      "gameId": "6503612",
+      "date": "",
+      "opponent": "Delaware",
+      "opponentId": "1461",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 34,
+        "allowed": 28
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 42
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 31.9,
+      "allowed": 35.3,
+      "gamesPlayed": 7
+    },
+    "secondHalf": {
+      "scored": 33.3,
+      "allowed": 41.9,
+      "gamesPlayed": 7
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 30.2,
+      "allowed": 37.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 30.8,
+      "allowed": 43.8,
+      "gamesPlayed": 5
+    }
+  }
+}

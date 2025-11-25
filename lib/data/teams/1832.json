@@ -1,0 +1,106 @@
+{
+  "teamId": "1832",
+  "teamName": "Liberty",
+  "lastUpdated": "2025-11-25T16:42:55.524Z",
+  "games": [
+    {
+      "gameId": "6502298",
+      "date": "",
+      "opponent": "Vermont",
+      "opponentId": "2682",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6502293",
+      "date": "",
+      "opponent": "CarolinaU",
+      "opponentId": "51928",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 19
+      },
+      "secondHalf": {
+        "scored": 49,
+        "allowed": 27
+      }
+    },
+    {
+      "gameId": "6502291",
+      "date": "",
+      "opponent": "Fla. Atlantic",
+      "opponentId": "736",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 48,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 40,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6502288",
+      "date": "",
+      "opponent": "Col. of Charleston",
+      "opponentId": "1586",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6502700",
+      "date": "",
+      "opponent": "Ky. Christian",
+      "opponentId": "53565",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 45,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 53,
+        "allowed": 30
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 44.2,
+      "allowed": 28.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 46.4,
+      "allowed": 35.4,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 44.2,
+      "allowed": 28.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 46.4,
+      "allowed": 35.4,
+      "gamesPlayed": 5
+    }
+  }
+}

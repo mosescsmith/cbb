@@ -1,0 +1,106 @@
+{
+  "teamId": "33",
+  "teamName": "University of Denver",
+  "lastUpdated": "2025-11-25T02:28:39.597Z",
+  "games": [
+    {
+      "gameId": "6502810",
+      "date": "",
+      "opponent": "Colorado St.",
+      "opponentId": "721",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 48
+      }
+    },
+    {
+      "gameId": "6502786",
+      "date": "",
+      "opponent": "UTSA",
+      "opponentId": "1705",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 47
+      }
+    },
+    {
+      "gameId": "6502809",
+      "date": "",
+      "opponent": "Montana St.",
+      "opponentId": "1257",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6502808",
+      "date": "",
+      "opponent": "Washington",
+      "opponentId": "2033",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 47
+      }
+    },
+    {
+      "gameId": "6502795",
+      "date": "",
+      "opponent": "Seattle U",
+      "opponentId": "2258",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 42
+      },
+      "secondHalf": {
+        "scored": 36,
+        "allowed": 42
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 34.4,
+      "allowed": 37.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 41.6,
+      "allowed": 43.8,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 34.4,
+      "allowed": 37.4,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 41.6,
+      "allowed": 43.8,
+      "gamesPlayed": 5
+    }
+  }
+}

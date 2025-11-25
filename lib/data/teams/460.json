@@ -1,0 +1,121 @@
+{
+  "teamId": "460",
+  "teamName": "Auburn University",
+  "lastUpdated": "2025-11-25T02:13:56.356Z",
+  "games": [
+    {
+      "gameId": "6503610",
+      "date": "",
+      "opponent": "Oregon",
+      "opponentId": "926",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 2,
+        "allowed": 0
+      }
+    },
+    {
+      "gameId": "6504473",
+      "date": "",
+      "opponent": "Jackson St.",
+      "opponentId": "763",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 55,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 57,
+        "allowed": 42
+      }
+    },
+    {
+      "gameId": "6502563",
+      "date": "",
+      "opponent": "Houston",
+      "opponentId": "2157",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 35,
+        "allowed": 39
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 34
+      }
+    },
+    {
+      "gameId": "6502329",
+      "date": "",
+      "opponent": "Wofford",
+      "opponentId": "335",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 22
+      },
+      "secondHalf": {
+        "scored": 53,
+        "allowed": 40
+      }
+    },
+    {
+      "gameId": "6506003",
+      "date": "",
+      "opponent": "Merrimack",
+      "opponentId": "2193",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 22
+      },
+      "secondHalf": {
+        "scored": 56,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6501407",
+      "date": "",
+      "opponent": "Bethune-Cookman",
+      "opponentId": "839",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 44
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 40.7,
+      "allowed": 30.2,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 41.3,
+      "allowed": 32.5,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 41.2,
+      "allowed": 28.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 41,
+      "allowed": 30.2,
+      "gamesPlayed": 5
+    }
+  }
+}

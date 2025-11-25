@@ -1,0 +1,106 @@
+{
+  "teamId": "926",
+  "teamName": "University of Oregon",
+  "lastUpdated": "2025-11-25T02:17:02.743Z",
+  "games": [
+    {
+      "gameId": "6503610",
+      "date": "",
+      "opponent": "Auburn",
+      "opponentId": "460",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 37
+      },
+      "secondHalf": {
+        "scored": 8,
+        "allowed": 7
+      }
+    },
+    {
+      "gameId": "6503609",
+      "date": "",
+      "opponent": "Oregon St.",
+      "opponentId": "1964",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6530685",
+      "date": "",
+      "opponent": "South Dakota St.",
+      "opponentId": "2648",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 43,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6503608",
+      "date": "",
+      "opponent": "Rice",
+      "opponentId": "1307",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 27,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 40,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6503321",
+      "date": "",
+      "opponent": "Hawaii",
+      "opponentId": "755",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 33,
+        "allowed": 26
+      },
+      "secondHalf": {
+        "scored": 27,
+        "allowed": 33
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 35.6,
+      "allowed": 32.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 32.8,
+      "allowed": 29.4,
+      "gamesPlayed": 5
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 35.6,
+      "allowed": 32.6,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 32.8,
+      "allowed": 29.4,
+      "gamesPlayed": 5
+    }
+  }
+}

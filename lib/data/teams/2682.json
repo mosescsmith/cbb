@@ -1,0 +1,121 @@
+{
+  "teamId": "2682",
+  "teamName": "Vermont",
+  "lastUpdated": "2025-11-24T22:49:40.188Z",
+  "games": [
+    {
+      "gameId": "6502298",
+      "date": "",
+      "opponent": "Liberty",
+      "opponentId": "1832",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 32,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 39
+      }
+    },
+    {
+      "gameId": "6501697",
+      "date": "",
+      "opponent": "Buffalo",
+      "opponentId": "489",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 43,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 47,
+        "allowed": 54
+      }
+    },
+    {
+      "gameId": "6501553",
+      "date": "",
+      "opponent": "Northeastern",
+      "opponentId": "917",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 33
+      },
+      "secondHalf": {
+        "scored": 55,
+        "allowed": 41
+      }
+    },
+    {
+      "gameId": "6501225",
+      "date": "",
+      "opponent": "Brown",
+      "opponentId": "130",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 24,
+        "allowed": 32
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 33
+      }
+    },
+    {
+      "gameId": "6504047",
+      "date": "",
+      "opponent": "Plattsburgh St.",
+      "opponentId": "2622",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 44,
+        "allowed": 31
+      },
+      "secondHalf": {
+        "scored": 69,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6504234",
+      "date": "",
+      "opponent": "Western New Eng.",
+      "opponentId": "1194",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 41
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 35,
+      "allowed": 33.8,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 48.5,
+      "allowed": 39.8,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 34.6,
+      "allowed": 35.2,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 50.6,
+      "allowed": 39.6,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "teamId": "1965",
+  "teamName": "Pacific",
+  "lastUpdated": "2025-11-25T17:32:21.760Z",
+  "games": [
+    {
+      "gameId": "6501189",
+      "date": "",
+      "opponent": "Stony Brook",
+      "opponentId": "284",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 35,
+        "allowed": 20
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6533637",
+      "date": "",
+      "opponent": "Fla. Atlantic",
+      "opponentId": "736",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 28,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 31,
+        "allowed": 42
+      }
+    },
+    {
+      "gameId": "6501282",
+      "date": "",
+      "opponent": "Cal St. Fullerton",
+      "opponentId": "1766",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 44,
+        "allowed": 24
+      },
+      "secondHalf": {
+        "scored": 41,
+        "allowed": 49
+      }
+    },
+    {
+      "gameId": "6501670",
+      "date": "",
+      "opponent": "Long Beach St.",
+      "opponentId": "1057",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 44,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6530855",
+      "date": "",
+      "opponent": "Nevada",
+      "opponentId": "1628",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 40,
+        "allowed": 40
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6504753",
+      "date": "",
+      "opponent": "LIFE Pacific",
+      "opponentId": "53465",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 41,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 27
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 35.5,
+      "allowed": 30.5,
+      "gamesPlayed": 6
+    },
+    "secondHalf": {
+      "scored": 41,
+      "allowed": 38.3,
+      "gamesPlayed": 6
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 34.4,
+      "allowed": 30.8,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 40.8,
+      "allowed": 40.6,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "teamId": "353",
+  "teamName": "UC Riverside",
+  "lastUpdated": "2025-11-24T22:49:51.503Z",
+  "games": [
+    {
+      "gameId": "6503914",
+      "date": "",
+      "opponent": "Grambling",
+      "opponentId": "746",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 30,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 53,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6503909",
+      "date": "",
+      "opponent": "San Diego",
+      "opponentId": "2326",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 39,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 46,
+        "allowed": 42
+      }
+    },
+    {
+      "gameId": "6501463",
+      "date": "",
+      "opponent": "California Baptist",
+      "opponentId": "261806",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 31,
+        "allowed": 49
+      },
+      "secondHalf": {
+        "scored": 26,
+        "allowed": 31
+      }
+    },
+    {
+      "gameId": "6503167",
+      "date": "",
+      "opponent": "North Dakota",
+      "opponentId": "1278",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 32,
+        "allowed": 41
+      },
+      "secondHalf": {
+        "scored": 42,
+        "allowed": 35
+      }
+    },
+    {
+      "gameId": "6503902",
+      "date": "",
+      "opponent": "New Mexico",
+      "opponentId": "1630",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 32,
+        "allowed": 36
+      },
+      "secondHalf": {
+        "scored": 36,
+        "allowed": 46
+      }
+    },
+    {
+      "gameId": "6503165",
+      "date": "",
+      "opponent": "North Dakota",
+      "opponentId": "1278",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 37,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 37,
+        "allowed": 36
+      }
+    },
+    {
+      "gameId": "6503900",
+      "date": "",
+      "opponent": "La Sierra",
+      "opponentId": "53566",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 45,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 45,
+        "allowed": 22
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 35.1,
+      "allowed": 36,
+      "gamesPlayed": 7
+    },
+    "secondHalf": {
+      "scored": 40.7,
+      "allowed": 35.7,
+      "gamesPlayed": 7
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 32.8,
+      "allowed": 38.2,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 40.6,
+      "allowed": 38.4,
+      "gamesPlayed": 5
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "teamId": "2350",
+  "teamName": "Troy",
+  "lastUpdated": "2025-11-24T22:46:43.965Z",
+  "games": [
+    {
+      "gameId": "6506420",
+      "date": "",
+      "opponent": "Toledo",
+      "opponentId": "291",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 30
+      },
+      "secondHalf": {
+        "scored": 32,
+        "allowed": 45
+      }
+    },
+    {
+      "gameId": "6503425",
+      "date": "",
+      "opponent": "Southern California",
+      "opponentId": "616",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 29,
+        "allowed": 29
+      },
+      "secondHalf": {
+        "scored": 39,
+        "allowed": 39
+      }
+    },
+    {
+      "gameId": "6503262",
+      "date": "",
+      "opponent": "San Diego St.",
+      "opponentId": "2640",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 38,
+        "allowed": 38
+      },
+      "secondHalf": {
+        "scored": 51,
+        "allowed": 51
+      }
+    },
+    {
+      "gameId": "6502773",
+      "date": "",
+      "opponent": "CSUN",
+      "opponentId": "1058",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 49,
+        "allowed": 51
+      },
+      "secondHalf": {
+        "scored": 36,
+        "allowed": 43
+      }
+    },
+    {
+      "gameId": "6503424",
+      "date": "",
+      "opponent": "LMU (CA)",
+      "opponentId": "790",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 25,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 38,
+        "allowed": 47
+      }
+    },
+    {
+      "gameId": "6503423",
+      "date": "",
+      "opponent": "Pensacola Christian",
+      "opponentId": "53585",
+      "isHome": true,
+      "firstHalf": {
+        "scored": 57,
+        "allowed": 27
+      },
+      "secondHalf": {
+        "scored": 64,
+        "allowed": 29
+      }
+    },
+    {
+      "gameId": "6503422",
+      "date": "",
+      "opponent": "Furman",
+      "opponentId": "1486",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 36,
+        "allowed": 23
+      },
+      "secondHalf": {
+        "scored": 28,
+        "allowed": 38
+      }
+    },
+    {
+      "gameId": "6503421",
+      "date": "",
+      "opponent": "Kent St.",
+      "opponentId": "1825",
+      "isHome": false,
+      "firstHalf": {
+        "scored": 42,
+        "allowed": 34
+      },
+      "secondHalf": {
+        "scored": 45,
+        "allowed": 53
+      }
+    }
+  ],
+  "seasonAverages": {
+    "firstHalf": {
+      "scored": 39,
+      "allowed": 32.4,
+      "gamesPlayed": 8
+    },
+    "secondHalf": {
+      "scored": 41.6,
+      "allowed": 43.1,
+      "gamesPlayed": 8
+    }
+  },
+  "last5Averages": {
+    "firstHalf": {
+      "scored": 35.4,
+      "allowed": 35,
+      "gamesPlayed": 5
+    },
+    "secondHalf": {
+      "scored": 39.2,
+      "allowed": 45,
+      "gamesPlayed": 5
+    }
+  }
+}
