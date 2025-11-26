@@ -146,7 +146,15 @@ export async function POST(request: NextRequest) {
     const messages = [
       {
         role: 'system',
-        content: 'You are a college basketball prediction expert. Provide score predictions in JSON format: {"homeScore": number, "awayScore": number, "confidence": 0-1, "reasoning": "brief explanation"}',
+        content: `You are a college basketball prediction expert. Provide score predictions in JSON format: {"homeScore": number, "awayScore": number, "confidence": 0-1, "reasoning": "brief explanation"}
+
+CRITICAL: Your reasoning MUST be consistent with your predicted scores. If your scores show Team A winning, your reasoning must explain why Team A wins. Never say one team "pulls ahead" or "wins" if your scores show the opposite team winning. The reasoning should justify the exact scores you provide.
+
+Remember:
+- homeScore = points for the HOME team (listed second in matchup)
+- awayScore = points for the AWAY team (listed first in matchup)
+- If homeScore > awayScore, reasoning must explain why HOME team wins
+- If awayScore > homeScore, reasoning must explain why AWAY team wins`,
       },
       {
         role: 'user',
@@ -303,9 +311,9 @@ function buildPredictionPrompt(
   const baseInfo = `
 Predict the ${half} half score for this college basketball game:
 
-**${game.awayTeam.name}** ${game.awayTeam.rank ? `(#${game.awayTeam.rank})` : ''}
+AWAY TEAM: **${game.awayTeam.name}** ${game.awayTeam.rank ? `(#${game.awayTeam.rank})` : ''} → Your awayScore
 vs
-**${game.homeTeam.name}** ${game.homeTeam.rank ? `(#${game.homeTeam.rank})` : ''}
+HOME TEAM: **${game.homeTeam.name}** ${game.homeTeam.rank ? `(#${game.homeTeam.rank})` : ''} → Your homeScore
 
 ${locationContext}
 Date: ${new Date(game.date).toLocaleDateString()}

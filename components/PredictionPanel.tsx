@@ -5,6 +5,7 @@ import { Game, PredictionResponse } from '@/lib/types';
 import { debugLogger } from '@/lib/debugLogger';
 import { DebugPanel } from './DebugPanel';
 import { TeamSelector } from './TeamSelector';
+import { getCachedPrediction, storePrediction, StoredPrediction } from '@/lib/predictionStorage';
 type HalfType = '1st' | '2nd';
 
 interface TeamSuggestion {
@@ -53,10 +54,31 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
   const [editingHomeTeam, setEditingHomeTeam] = useState(false);
   const [editingAwayTeam, setEditingAwayTeam] = useState(false);
 
+  // Track if prediction was loaded from cache
+  const [loadedFromCache, setLoadedFromCache] = useState(false);
+
   // Load debug preference on mount
   useEffect(() => {
     setDebugEnabled(debugLogger.isDebugEnabled());
   }, []);
+
+  // Load cached prediction on mount (for 1st half only)
+  useEffect(() => {
+    if (selectedHalf === '1st') {
+      const cached = getCachedPrediction(game.id, '1st');
+      if (cached) {
+        setPrediction(cached.prediction);
+        setLoadedFromCache(true);
+        onPredictionUpdate?.(cached.prediction);
+        if (debugLogger.isDebugEnabled()) {
+          debugLogger.info('Loaded cached 1st half prediction', {
+            gameId: game.id,
+            cachedAt: new Date(cached.timestamp).toLocaleTimeString(),
+          });
+        }
+      }
+    }
+  }, [game.id, selectedHalf, onPredictionUpdate]);
 
   // Fetch team stats status from TeamRankings CSV data
   const fetchTeamStatsStatus = useCallback(async (teamId: string, teamName: string): Promise<TeamStatsStatus | null> => {
@@ -119,12 +141,26 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
 
   // Reset state when tab switches
   useEffect(() => {
-    setPrediction(null);
     setError(null);
     setHalftimeHomeScore('');
     setHalftimeAwayScore('');
+    setLoadedFromCache(false);
+
+    // When switching to 1st half, check for cached prediction
+    if (selectedHalf === '1st') {
+      const cached = getCachedPrediction(game.id, '1st');
+      if (cached) {
+        setPrediction(cached.prediction);
+        setLoadedFromCache(true);
+        onPredictionUpdate?.(cached.prediction);
+        return;
+      }
+    }
+
+    // Otherwise clear prediction
+    setPrediction(null);
     onPredictionUpdate?.(null);
-  }, [selectedHalf, onPredictionUpdate]);
+  }, [selectedHalf, game.id, onPredictionUpdate]);
 
   // Auto-fetch halftime scores when switching to 2nd half
   useEffect(() => {
@@ -236,7 +272,13 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
       }
 
       setPrediction(data);
+      setLoadedFromCache(false);
       onPredictionUpdate?.(data);
+
+      // Cache the prediction (for 1st half only, as 2nd half depends on halftime scores)
+      if (selectedHalf === '1st') {
+        storePrediction(game.id, '1st', data, game.location === 'neutral');
+      }
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Unknown error';
       setError(errorMsg);
@@ -466,9 +508,25 @@ export function PredictionPanel({ game, onPredictionUpdate }: PredictionPanelPro
       {/* Prediction Result */}
       {prediction && (
         <div className="mt-6 p-6 bg-blue-50 rounded-lg border border-blue-200">
-          <h3 className="font-semibold text-gray-800 mb-4">
-            {selectedHalf === '1st' ? 'Predicted 1st Half Score' : 'Predicted Final Score'}
-          </h3>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-semibold text-gray-800">
+              {selectedHalf === '1st' ? 'Predicted 1st Half Score' : 'Predicted Final Score'}
+            </h3>
+            {loadedFromCache && selectedHalf === '1st' && (
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-green-600 bg-green-100 px-2 py-0.5 rounded">
+                  Cached
+                </span>
+                <button
+                  onClick={handlePredict}
+                  disabled={loading}
+                  className="text-xs text-blue-600 hover:text-blue-800 underline disabled:opacity-50"
+                >
+                  Refresh
+                </button>
+              </div>
+            )}
+          </div>
           <div className="grid grid-cols-2 gap-4 text-center">
             <div>
               <div className="text-sm text-gray-600 mb-1">{game.awayTeam.name}</div>

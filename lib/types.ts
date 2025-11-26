@@ -42,6 +42,7 @@ export interface Game {
   location: LocationType;
   status: 'scheduled' | 'in_progress' | 'halftime' | 'final';
   currentPeriod?: string; // "1st", "2nd", "HALFTIME", "FINAL"
+  contestClock?: string; // Time remaining in period, e.g., "13:15"
   // Live scores (if available)
   homeScore?: number;
   awayScore?: number;
@@ -83,6 +84,7 @@ export interface NCAAPIGame {
     startTime: string;
     startTimeEpoch: number;
     currentPeriod: string;
+    contestClock?: string; // Time remaining in period, e.g., "13:15"
     home: {
       names: {
         char6: string;

@@ -49,6 +49,7 @@ export async function fetchGamesForDate(date: Date): Promise<Game[]> {
         location: 'home', // Default to home; user can edit
         status: mapGameStatus(g.gameState),
         currentPeriod: g.currentPeriod,
+        contestClock: g.contestClock || undefined, // Time remaining, e.g., "13:15"
         homeScore: g.home.score ?? undefined,
         awayScore: g.away.score ?? undefined,
       };
